@@ -1,0 +1,9 @@
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\bin\Debug\netstandard2.0\DesignDataStructures.deps.json
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\bin\Debug\netstandard2.0\DesignDataStructures.dll
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\bin\Debug\netstandard2.0\DesignDataStructures.pdb
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.csprojAssemblyReference.cache
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.csproj.CoreCompileInputs.cache
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.AssemblyInfoInputs.cache
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.AssemblyInfo.cs
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.dll
+C:\Users\gss1201\source\repos\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.pdb

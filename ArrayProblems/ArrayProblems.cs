@@ -1,0 +1,624 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ArrayProblems
+{
+    public static class ArrayProblem
+    {
+        #region DayofTheWeek
+        public static string DayOfTheWeek(int day, int month, int year)
+        {
+            return new DateTime(year, month, day).DayOfWeek.ToString();
+
+        }
+        #endregion
+
+        #region Remove Element
+        public static int RemoveElement(int[] nums, int val)
+        {
+            int i = 0;
+
+            for (int j = 0; j < nums.Length; j++)
+            {
+                if (nums[j] != val)
+                {
+                    nums[i] = nums[j];
+                    i++;
+                }
+            }
+
+            return i;
+        }
+        #endregion
+
+        #region Remove Duplicates
+        public static int RemoveDuplicates(int[] nums)
+        {
+            int i = 0;
+            if (nums.Length==0)
+            {
+                return 0;
+            }
+            for (int j = 1; j < nums.Length; j++)
+            {
+                if (nums[j] != nums[i])
+                {
+                    i++;
+                    nums[i] = nums[j];
+                }
+            }
+            return i+1;
+        }
+
+        public static int RemoveDuplicates_1(int[] nums)
+        {
+            return 0;
+        }
+
+        public static void Rotate(int[] nums, int k)
+        {
+            if (nums!=null && nums.Length>1)
+            {
+                int l = nums.Length;
+                if (k > l)
+                {
+                    k = k - l;
+                }
+                Reverse(nums, 0, l - k - 1);
+                Reverse(nums, l - k, l - 1);
+                Reverse(nums, 0, l - 1);
+            }
+        }
+
+        public static void Reverse(int[] nums, int start,int end)
+        {
+            if (start>-1 && end>-1)
+            {
+                while (start < end)
+                {
+                    var temp = nums[start];
+                    nums[start] = nums[end];
+                    nums[end] = temp;
+                    start++;
+                    end--;
+                }
+            }
+          
+        }
+        #endregion
+
+        #region Duplicates Zeros
+
+        public static void DuplicateZeros(int [] arr)
+        {
+            var queue = new Queue<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                queue.Enqueue(arr[i]);
+            }
+            int j = 0;
+            while (j<arr.Length)
+            {
+                int value = queue.Dequeue();
+                arr[j] = value;
+                if (value==0 && j<arr.Length-1)
+                {
+                    j++;
+                    arr[j] = 0;
+                }
+                j++;
+            }
+        }
+
+        #endregion
+
+        #region Move Zeros to End
+
+        public static void MovingZeroEnd(int[] nums)
+        {
+            int j = 0;
+            for (int i=0; i<nums.Length;i++)
+            {
+                if (nums[i] != 0)
+                {
+                    nums[j] = nums[i];
+                    j++;
+                }
+            }
+            while (j<nums.Length)
+            {
+                nums[j] = 0;
+                j++;
+            }
+        }
+
+        #endregion
+
+        public static int MaxConsecutiveOne(int [] nums)
+        {
+            int count = 0;
+            int previous = 0;
+
+            for (int i=0; i<nums.Length;i++)
+            {
+                if (nums[i] == 1)
+                {
+                    count++;
+                }
+                else
+                {
+
+                    if(count>previous)
+                    {
+                        previous = count;
+                    }
+
+                    count = 0;
+                }
+            }
+
+            return previous > count ? previous : count;
+        }
+
+        public static int MissingNumber(int [] nums)
+        {
+
+            int n = nums.Length;
+            int expectedSum = n *(n + 1) / 2;
+            int actualSum = 0;
+            for (int j=0; j<nums.Length; j++)
+            {
+                actualSum += nums[j];
+            }
+            return expectedSum - actualSum;
+        }
+
+        public static bool ContainsDuplicate(int[] nums)
+        {
+            return new HashSet<int>(nums).Count != nums.Length;
+        }
+
+        public static int [] Decompress(int [] nums)
+        {
+            var list = new List<int>();
+            for (int i = 0; i < nums.Length; i=i+2)
+            {
+                int f = nums[i];
+                
+                while (f>0){
+                    list.Add(nums[i + 1]);
+                    f--;
+                }
+            }
+            return list.ToArray();
+             
+        }
+
+        public static int[] SumZero(int n)
+        {
+            int[] arr = new int[n];
+
+            if (n == 1)
+            {
+                arr[0] = 0;
+            }
+            else
+            {
+                int k = 1;
+                int i = n % 2 == 0 ? n - 1 : n - 2;
+
+                for (int j=0; j < i; j=j+2)
+                {
+                    arr[j] = -k;
+                    arr[j + 1] = k;
+
+                    k = k + 1;
+                }
+
+                if (n % 2!=0)
+                {
+                    arr[n - 1] = 0;
+                }
+            }
+            return arr;
+        }
+
+        public static int JewelAndStone(string J, string S)
+        {
+            int count = 0;
+
+            foreach(var j in J)
+            {
+                foreach (var s in S)
+                {
+                    if (s==j)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        public static int[][] Transpose(int[][] A)
+        {
+            int row = A.Length;
+            int col = A[0].Length;
+
+            int[][] newMatrix = new int[col][];
+            for(int j=0;j<col;j++)
+            {
+                newMatrix[j] = new int[row];
+
+            }
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    newMatrix[j][i] = A[i][j];
+                }
+            }
+
+            return newMatrix;
+
+        }
+
+        public static int ProductAndSum(int n)
+        {
+            int sum = 0;
+            int product = 1;
+            while(n>0)
+            {
+                var num = n % 10;
+                sum += num;
+                product *= num;
+                n = n / 10;
+            }
+
+            return product - sum;
+        }
+
+        #region Convert string to Lower Case
+        // A-65
+        // a-97
+
+        public static string ToLowerCase(string str)
+        {
+
+            char [] arr = new char[str.Length];
+            for(int k=0; k<str.Length; k++)
+            {
+                arr[k] = (str[k] >= 'A' && str[k] <= 'Z') ? (char)(str[k] - 'A' + 'a') : str[k];
+            }
+
+            return String.Join("", arr);
+
+        }
+
+        #endregion
+
+        #region Count negative number in Sorted (non increasing order) Matrix
+        public  static int CountNegatives(int[][] grid)
+        {
+            int count = 0;
+           
+            foreach(int [] x in grid)
+            {
+                foreach (int number in x)
+                {
+                    if (number < 0)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
+        #endregion
+
+        #region Replace Elements with Greatest Element on Right Side
+
+        public static int[] ReplaceElements(int[] arr)
+        {
+            int[] result = new int[arr.Length];
+
+            int max = -1;
+            result[arr.Length - 1] = max;
+            for (int i=arr.Length-1; i>0; i--)
+            {
+                if (arr[i]>max)
+                {
+                    max = arr[i];                    
+                }
+
+                result[i - 1] = max;
+            }
+
+            return result;
+        }
+
+        #endregion
+
+        #region Flipping an Image
+        public static  int[][] FlipAndInvertImage(int[][] A)
+        {
+            foreach (int [] row in A)
+            {
+                int i = 0;
+                int j = row.Length - 1;
+
+                while (i < j)
+                {
+                    var temp = row[i];
+                    row[i] = row[j];
+                    row[j] = temp;
+                    if (row[i] == 0)
+                    {
+                        row[i] = 1;
+                    }
+                    else
+                    {
+                        row[i] = 0;
+                    }
+
+                    if (row[j] == 0)
+                    {
+                        row[j] = 1;
+                    }
+                    else
+                    {
+                        row[j] = 0;
+                    }
+                    i++;
+                    j--;
+                }
+            }
+
+            return A;
+        }
+
+        private static int[] reverse(int[] row)
+        {
+            int i = 0;
+            int j = row.Length - 1;
+
+            while (i<j)
+            {
+                var temp = row[i];
+                row[i] = row[j];
+                row[j] = temp;
+                row[i] = row[i] == 0 ? 1 : 0;
+                row[j] = row[j] == 0 ? 1 : 0;
+                i++;
+                j--;
+            }
+
+            return row;
+        }
+
+        #endregion
+
+        #region Height Checker
+        public static int HeightChecker(int[] heights)
+        {
+            int count = 0;
+
+            int[] heights1 = heights.Select(x => x).OrderBy(x => x).ToArray();
+
+            int k = 0;
+            while (k< heights1.Length)
+            {
+                if (heights[k]!= heights1[k])
+                {
+                    count++;
+                }
+                k++;
+            }
+
+            return count;
+           
+        }
+
+        #endregion
+
+        #region Fibonacci Number
+        public static int Fib(int N)
+        {
+            int num = 0;
+            int i = 0;
+            int temp1 = 0;
+            int temp2 = 1;
+
+            while (i<=N)
+            {
+                if (i > 1)
+                {
+                    num = temp1 + temp2;
+                    temp1 = temp2;
+                    temp2 = num;
+                }
+                i++;
+            }
+
+            if (N == 0)
+            { num = 0; }
+
+            if (N==1)
+            {
+                num = 1;
+            }
+               
+            return num;
+        }
+
+        #endregion
+
+        #region Sort Matrix
+        public static int[,] SortMatrix(int[,] A)
+        {
+            int i = A.GetLength(0);
+            int j = A.GetLength(1);
+            var temp = new int[i*j];
+            int k = 0;
+            for (int p=0; p<i; p++)
+            {
+                for(int q=0; q<j; q++)
+                {
+                    temp[k++] = A[p, q];
+                }
+            }
+
+            temp = temp.OrderBy(x => x).ToArray();
+
+            int count = 0;
+            for (int p = 0; p < i; p++)
+            {
+                for (int q = 0; q < j; q++)
+                {
+                    A[p, q] = temp[count];
+                    count++;
+                }
+            }
+
+            return A;
+        }
+        #endregion
+
+        #region Sort Matrix Diagonally.
+        public static int[][] DiagonalSort(int[][] mat)
+        {
+            for (int i = 0; i < mat.Length; i++)
+            {
+                for (int j = 0; j < mat[0].Length; j++)
+                {
+                    List<int> lst = new List<int>();
+                    int c = i;
+                    for (int k = j; k < mat[0].Length; k++)
+                    {
+                        if (c < mat.Length && k < mat[0].Length)
+                        {
+                            lst.Add(mat[c][k]);
+                        }
+                        c = c + 1;
+                    }
+
+                    c = i;
+
+                    lst = lst.OrderBy(x => x).ToList();
+                    int lstCounter = 0;
+
+                    for (int k = j; k < mat[0].Length; k++)
+                    {
+                        if (c < mat.Length && k < mat[0].Length && lstCounter < lst.Count())
+                        {
+                            mat[c][k] = lst[lstCounter];
+                        }
+                        c = c + 1;
+                        lstCounter++;
+                    }
+
+                }
+            }
+            return mat;
+        }
+        #endregion
+
+        #region Reveal Cards In Increasing Order
+
+        /// <summary>
+        /// 1- Sort the given array in increasing order.
+        /// 2- Create queue with all the index position starting from 0;
+        /// 3- Create a result array with same length as deck array
+        /// 4- for each loop on result array
+        ///    first pop the queue and use the fetched value as 
+        ///     res[queue.enquue]= dec[i]
+        ///     queue.enqueue(queue.dequeue)
+        /// </summary>
+        /// <param name="deck"></param>
+        /// <returns></returns>
+        public static  int[] DeckRevealedIncreasing(int[] deck)
+        {
+            //Sor the array in increasing order first
+            for (int i=0; i<deck.Length; i++)
+            {
+                for (int j = 0; j < deck.Length - i - 1; j++)
+                {
+                    if (deck[j]>deck[j+1])
+                    {
+                        int temp = deck[j];
+                        deck[j] = deck[j + 1];
+                        deck[j + 1] = temp;
+                    }
+                }
+            }
+
+            Queue<int> queues = new Queue<int>();
+            int[] result = new int[deck.Length];
+            for (int i = 0; i < deck.Length; i++)
+            {
+                queues.Enqueue(i);
+            }
+
+            for(int i=0; i<result.Length; i++)
+            {
+                result[queues.Dequeue()] = deck[i];
+                if (queues.Count>0)
+                queues.Enqueue(queues.Dequeue());
+            }
+
+            return result;
+        }
+
+        #endregion
+
+
+        #region Reduce Array Size to The Half
+        public static int MinSetSize(int[] arr)
+        {
+            var item = arr.GroupBy(x => x).Select(x => x.Count());
+
+            int half = (int)arr.Length / 2;
+            int count = 0;
+            foreach (var i in item.OrderByDescending(x=>x))
+            {
+                if (half>0)
+                {
+                    half = half - i;
+                    count++;
+                }
+            }
+
+            return count;
+        }
+        #endregion
+
+        #region Container With Most Water
+
+        public static int MaxArea(int[] height)
+        {
+            int maxArea = 0;int l = 0; int r = height.Length - 1;
+
+            while(l<r)
+            {
+                maxArea = Math.Max(maxArea, Math.Min(height[l], height[r]) * (r - l));
+
+                if (height[l]<height[r])
+                {
+                    l++;
+                }
+                else
+                {
+                    r--;
+                }
+                
+            }
+
+            return maxArea;
+        }
+        #endregion
+    }
+}

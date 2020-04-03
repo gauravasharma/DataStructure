@@ -1,0 +1,9 @@
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.deps.json
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.dll
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.pdb
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.csprojAssemblyReference.cache
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.csproj.CoreCompileInputs.cache
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.AssemblyInfoInputs.cache
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.AssemblyInfo.cs
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.dll
+C:\Users\gss1201\source\repos\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.pdb

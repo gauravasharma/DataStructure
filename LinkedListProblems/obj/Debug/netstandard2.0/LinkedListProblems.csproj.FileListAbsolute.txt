@@ -1,0 +1,9 @@
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\bin\Debug\netstandard2.0\LinkedListProblems.deps.json
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\bin\Debug\netstandard2.0\LinkedListProblems.dll
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\bin\Debug\netstandard2.0\LinkedListProblems.pdb
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.csproj.CoreCompileInputs.cache
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.AssemblyInfoInputs.cache
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.AssemblyInfo.cs
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.dll
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.pdb
+C:\Users\gss1201\source\repos\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.csprojAssemblyReference.cache
