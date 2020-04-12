@@ -575,7 +575,6 @@ namespace ArrayProblems
 
         #endregion
 
-
         #region Reduce Array Size to The Half
         public static int MinSetSize(int[] arr)
         {
@@ -707,7 +706,6 @@ namespace ArrayProblems
         }
 
         #endregion
-
 
         #region SmallerNumbersThanCurrent 
         public static int[] SmallerNumbersThanCurrent(int[] nums)
