@@ -620,5 +620,161 @@ namespace ArrayProblems
             return maxArea;
         }
         #endregion
+        #region Selection Sort( In Place Sorting)
+
+        /// <summary>
+        /// No Extra Space is required, only order of elements is changed within array.
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public static int[] SelectionSort(int[] nums)
+        {
+            int n = nums.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                int min_indx = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (nums[j] < nums[min_indx])
+                    {
+                        min_indx = j;
+                    }
+                }
+
+                int temp = nums[min_indx];
+                nums[min_indx] = nums[i];
+                nums[i] = temp;
+
+            }
+
+            return nums;
+        }
+        #endregion
+
+        #region Bubble Sort
+
+        public static int[] BubbleSort(int[] nums)
+        {
+            int n = nums.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                bool swapped = false; ;
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (nums[j] > nums[j + 1])
+                    {
+                        int temp = nums[j + 1];
+                        nums[j + 1] = nums[j];
+                        nums[j] = temp;
+                        swapped = true;
+                    }
+                }
+                // iF no element swapped break the loop
+                if (swapped == false)
+                {
+                    break;
+                }
+            }
+
+            return nums;
+        }
+
+        #endregion
+
+        #region Bubble Sort using recursion
+
+        public static int[] BubbleSortUsingRecursion(int[] nums, int n)
+        {
+            if (n == 1)
+            {
+                return nums;
+            }
+
+            for (int i = 0; i < n - 1; i++)
+            {
+
+                if (nums[i] > nums[i + 1])
+                {
+                    int temp = nums[i + 1];
+                    nums[i + 1] = nums[i];
+                    nums[i] = temp;
+                }
+
+            }
+
+            BubbleSortUsingRecursion(nums, n - 1);
+            return nums;
+        }
+
+        #endregion
+
+
+        #region SmallerNumbersThanCurrent 
+        public static int[] SmallerNumbersThanCurrent(int[] nums)
+        {
+            int[] arr = new int[nums.Length];
+            nums.CopyTo(arr, 0);
+            int n = nums.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                int min_indx = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (nums[j] < nums[min_indx])
+                    {
+                        min_indx = j;
+                    }
+                }
+
+                int temp = nums[min_indx];
+                nums[min_indx] = nums[i];
+                nums[i] = temp;
+
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                int len = Array.IndexOf(nums, arr[i]);
+                arr[i] = len;
+            }
+
+            return arr;
+        }
+        #endregion
+
+        #region CreateTargetArray
+        public static int[] CreateTargetArray(int[] nums, int[] index)
+        {
+            int n = nums.Length;
+            int[] arr = new int[n];
+            nums.CopyTo(arr, 0);
+            for (int i = 0; i < n; i++)
+            {
+                int pos = index[i];
+                int value = nums[i];
+
+                if (pos < i)
+                {
+                    arr = Reshift(arr, pos);
+                }
+
+                arr[pos] = value;
+            }
+
+            return arr;
+        }
+
+        private static int[] Reshift(int[] nums, int pos)
+        {
+            int[] arr = new int[nums.Length];
+            nums.CopyTo(arr, 0);
+
+            for (int i = pos; i < nums.Length - 1; i++)
+            {
+                arr[i + 1] = nums[i];
+            }
+            return arr;
+        }
+        #endregion
     }
 }
