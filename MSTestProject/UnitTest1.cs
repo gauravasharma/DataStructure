@@ -329,5 +329,38 @@ namespace MSTestProject
         {
             bool isPalindrome = StringProblem.IsPalindrome("ababababaYZababababa");
         }
+        [TestMethod]
+        public void SelctionSorting()
+        {
+            var nums = new int[] { 100, 200, 29, 8, 20, 1, 3 };
+            nums = ArrayProblem.SelectionSort(nums);
+        }
+
+        [TestMethod]
+        public void BubbleSorting()
+        {
+            var nums = new int[] { 100, 200, 29, 8, 20, 1, 3 };
+            nums = ArrayProblem.BubbleSort(nums);
+        }
+
+        [TestMethod]
+        public void BubbleSortingUsingRecursion()
+        {
+            var nums = new int[] { 100, 200, 29, 8, 20, 1, 3 };
+            nums = ArrayProblem.BubbleSortUsingRecursion(nums, nums.Length);
+        }
+        [TestMethod]
+        public void SmallerNumbersThanCurrent()
+        {
+            var nums = new int[] { 8, 1, 2, 2, 3 };
+            nums = ArrayProblem.SmallerNumbersThanCurrent(nums);
+        }
+        [TestMethod]
+        public void CreateTargetArray()
+        {
+            var nums = new int[] { 0, 1, 2, 3, 4 };
+            var index = new int[] { 0, 1, 2, 2, 1 };
+            var Target = ArrayProblem.CreateTargetArray(nums, index);
+        }
     }
 }
