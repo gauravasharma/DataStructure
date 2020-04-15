@@ -5,6 +5,7 @@ using ArrayProblems;
 using BinarySearchProblems;
 using DesignDataStructures;
 using StringProblems;
+using TreeProblems;
 
 namespace MSTestProject
 {
@@ -362,5 +363,88 @@ namespace MSTestProject
             var index = new int[] { 0, 1, 2, 2, 1 };
             var Target = ArrayProblem.CreateTargetArray(nums, index);
         }
+        [TestMethod]
+        public void TreeTraversalDFS()
+        {
+            BinaryTree tree = new BinaryTree(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+
+            var items1=TreeProblem.TraverseInOrder(tree.Root);
+            var itmes2 = TreeProblem.TraversePreOrder(tree.Root);
+            var itmes3 = TreeProblem.TraversePostOrder(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void TreeTraversalBFSUsingQueues()
+        {
+            BinaryTree tree = new BinaryTree(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+
+            var items = TreeProblem.BFSTraverseQueue(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void FindTreeHeight()
+        {
+            BinaryTree tree = new BinaryTree(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+
+            int height = TreeProblem.TreeHeight(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void BFSTraversalWithoutQueue()
+        {
+            BinaryTree tree = new BinaryTree(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+            var item = TreeProblem.BFSTraverse(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void LevelOrder()
+        {
+            BinaryTree tree = new BinaryTree(3);
+            tree.Root.Left = new Node(9);
+            tree.Root.Right = new Node(20);
+            tree.Root.Right.Left = new Node(15);
+            tree.Root.Right.Right = new Node(7);
+            var item = TreeProblem.LevelOrder(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void FloodFill()
+        {
+            //var arr = new int[3][];
+            //arr[0] = new int[] { 1, 1, 1 };
+            //arr[1] = new int[] { 1, 1, 0 };
+            //arr[2] = new int[] { 1, 0, 1 };
+
+            var arr = new int[2][];
+            arr[0] = new int[] { 0, 0, 0 };
+            arr[1] = new int[] { 0, 1, 1 };
+
+            var item = TreeProblem.FloodFill(arr, 1,1,1);
+
+        }
+
+
+
     }
 }
