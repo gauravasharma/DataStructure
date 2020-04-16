@@ -774,5 +774,34 @@ namespace ArrayProblems
             return arr;
         }
         #endregion
+
+        #region find GCD
+
+        public static int FindGCD(int a , int b)
+        {
+            if(a==0)
+            {
+                return b;
+            }
+
+            return FindGCD(b % a, a);
+        }
+
+        #endregion
+
+        #region find GCD of Given Array
+
+        public static int gcdOfArray(int [] arr, int n)
+        {
+            int gcd = arr[0];
+            for (int i=1; i<n; i++)
+            {
+                gcd = FindGCD(arr[i], gcd);
+            }
+
+            return gcd;
+        }
+
+        #endregion
     }
 }

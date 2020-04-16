@@ -72,18 +72,49 @@ namespace StringProblems
 
         public static string LongestPalindrome(string input)
         {
-            string max = string.Empty;
-            if (input.Length>0)
-            {
-                for (int i=0; i<input.Length-1; i++)
-                {
+            int n = input.Length;
+            bool[][] TEMP= new bool[n][];
 
+            int maxLength = 1;
+            for (int i = 0; i < n; i++)
+            {
+                TEMP[i] = new bool[n];
+                TEMP[i][i] = true;
+            }
+
+            int start = 0;
+            for (int i=0; i<n-1; i++)
+            {
+                if (input[i]==input[i+1])
+                {
+                    TEMP[i][i + 1] = true;
+                    start = i;
+                    maxLength = 2;
                 }
             }
 
-            return max;
-        }
+            for (int k=3; k<=n; k++)
+            {
+                for (int i = 0; i < n - k + 1; i++)
+                {
+                    int j = i + k - 1;
 
+                    if(TEMP[i+1][j-1] && input[i]== input[j])
+                    {
+                        TEMP[i][j] = true;
+
+                        if (k>maxLength) 
+                        {
+                            start = i;
+                            maxLength = k;
+                        }
+                        
+                    }
+                }
+            }
+
+            return input.Substring(start, maxLength);
+        }
         #endregion
     }
 }

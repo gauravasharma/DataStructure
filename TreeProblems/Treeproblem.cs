@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DesignDataStructures;
 namespace TreeProblems
 {
@@ -222,5 +223,75 @@ namespace TreeProblems
         }
         #endregion
 
+
+        #region CheckForBinaryTree
+
+        private static Node prev;
+        public static bool IsBST(Node root)
+        {
+           
+          prev = null;
+          return IsBinaryTree(root);
+
+        }
+        private static bool IsBinaryTree(Node node)
+        {
+            if (node != null)
+            {
+                if (!IsBinaryTree(node.Left))
+                    return false;
+
+                // allows only distinct values node 
+                if (prev != null &&
+                    node.Data <= prev.Data)
+                    return false;
+                prev = node;
+                return IsBinaryTree(node.Right);
+            }
+            return true;
+        }
+        #endregion
+
+        #region NumberOfIslands
+
+        public static int NumberOfIslands(int [][] grid)
+        {
+            int numOfIslands = 0;
+            if(grid==null || grid.Length==0)
+            {
+                return numOfIslands;
+            }
+            
+            for (int i = 0; i < grid.Length; i++ )
+            {
+                for(int j = 0; j < grid[0].Length; j++)
+                {
+                    if (grid[i][j] ==1) {
+                        numOfIslands++;
+                        DFSGrid(grid, j, 0);
+                    }
+                }
+            }
+
+            return numOfIslands;
+        }
+
+        private static void DFSGrid(int[][] grid, int r, int c )
+        {
+            int row = grid.Length-1;
+            int col = grid[0].Length-1;
+
+            if (r<0 || r>row || c<0 || c>col || grid[r][c] == 0)
+            {
+                return;
+            }
+            grid[r][c] = 0;
+            DFSGrid(grid,r-1, c);
+            DFSGrid(grid, r +1, c);
+            DFSGrid(grid, r, c-1);
+            DFSGrid(grid, r, c+1);
+        }
+
+        #endregion
     }
 }

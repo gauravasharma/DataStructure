@@ -444,7 +444,42 @@ namespace MSTestProject
 
         }
 
+        [TestMethod]
+        public void ISBST()
+        {
+            BinaryTree tree = new BinaryTree(2);
+            tree.Root.Left = new Node(1);
+            tree.Root.Right = new Node(3);
 
+            var items1 = TreeProblem.IsBST(tree.Root);
 
+        }
+
+        [TestMethod]
+        public void NumberOfIsland()
+        {
+            var arr = new int[3][];
+            arr[0] = new int[] { 1, 1, 1 };
+            arr[1] = new int[] { 1, 1, 0 };
+            arr[2] = new int[] { 1, 0, 1 };
+            var item = TreeProblem.NumberOfIslands(arr);
+
+        }
+        [TestMethod]
+        public void FindGCD()
+        {
+            var item = ArrayProblem.FindGCD(24, 36);
+        }
+
+        [TestMethod]
+        public void FindGCDOfArray()
+        {
+            var item = ArrayProblem.gcdOfArray(new int[] { 24,36},2);
+        }
+        [TestMethod]
+        public void FindLongestPalindrome()
+        {
+            var item = StringProblem.LongestPalindrome("forgeeksskeegfor");
+        }
     }
 }
