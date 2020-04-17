@@ -481,5 +481,46 @@ namespace MSTestProject
         {
             var item = StringProblem.LongestPalindrome("forgeeksskeegfor");
         }
+
+        [TestMethod]
+        public void FindMedian()
+        {
+            int[] arr1 = { 1, 2 };
+            int[] arr2 = { 3,4 };
+            var item = ArrayProblem.MedianOfSortedArray(arr1,arr2);
+        }
+        [TestMethod]
+        public void FindMissingNumber()
+        {
+            int[] arr1 = { 1,9,6,3,5,2 };
+            var item = ArrayProblem.MissingNumber1(arr1);
+        }
+
+        [TestMethod]
+        public void FindoptimalCost()
+        {
+            int[] arr1 = {2,4,3};
+            var item = ArrayProblem.FindOptimalCost(arr1);
+        }
+
+        [TestMethod]
+        public void FindValidParenthesis()
+        {
+            string s = "]";
+            var item = ArrayProblem.IsValidParenthesis(s);
+        }
+
+        [TestMethod]
+        public void VerifyLRUCache()
+        {
+            LRUCache cache = new LRUCache(2);
+            cache.Put(2, 1);
+            cache.Put(1, 1);
+            cache.Put(2,3);
+            cache.Put(4, 1);
+
+            int i =cache.Get(1);
+            int j = cache.Get(2);
+        }
     }
 }

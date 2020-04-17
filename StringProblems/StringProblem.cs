@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace StringProblems
 {
@@ -115,6 +116,23 @@ namespace StringProblems
 
             return input.Substring(start, maxLength);
         }
+        #endregion
+
+        #region Longest Substring without repeating characters
+
+        public static int LengthOfLongestSubstring(string s)
+        {
+            int length = 0;
+            
+            if (s.Length!=0)
+            {
+
+
+            }
+
+            return length;
+        }
+
         #endregion
     }
 }

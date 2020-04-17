@@ -619,7 +619,7 @@ namespace ArrayProblems
             return maxArea;
         }
         #endregion
-        #region Selection Sort( In Place Sorting)
+        #region Selection Sort( In Place Sorting)   
 
         /// <summary>
         /// No Extra Space is required, only order of elements is changed within array.
@@ -800,6 +800,145 @@ namespace ArrayProblems
             }
 
             return gcd;
+        }
+
+        #endregion
+
+        #region Median of two sorted array
+
+        public static decimal MedianOfSortedArray(int [] arr1,int [] arr2)
+        {
+            decimal median = 0;
+            List<int> list = new List<int>();
+            list.AddRange(arr1.ToList());
+            list.AddRange(arr2.ToList());
+
+            var orderlist = list.OrderBy(x => x).ToList();
+
+            if (orderlist.Count % 2 == 1)
+            {
+                median = orderlist[orderlist.Count/ 2];
+            }
+            else 
+            {
+                median = (orderlist[orderlist.Count / 2] + orderlist[(orderlist.Count / 2) - 1]) / 2;
+            }
+
+            return median;
+        }
+
+        #endregion
+
+        #region Missing Number
+
+        public static int MissingNumber1(int[] nums)
+        {
+            int n = nums.Length;
+            for (int i=0;i<n-1;i++ ) 
+            {
+                int min_index = i;
+                for(int j=i+1; j<n;j++)
+                {
+                    if (nums[min_index] >nums[j])
+                    {
+                        min_index = j;
+                    }
+                }
+
+                int temp = nums[min_index];
+                nums[min_index] = nums[i];
+                nums[i] = temp;
+            }
+            if (nums[n - 1] != n)
+            {
+                return n;
+            }
+
+            if (nums[0] != 0)
+            {
+                return 0;
+            }
+            for (int i=0; i<n-1; i++)
+            {
+                if (nums[i]!=nums[i+1]-1)
+                {
+                    return  nums[i] + 1;
+                }
+            }
+            return -1;
+        }
+
+        #endregion
+
+        #region FindAnagaram
+
+        #endregion
+
+        #region Optimal Utilization
+
+        public static int FindOptimalCost(int [] sticks)
+        {
+            int sum = 0;
+            int n = sticks.Length;
+            sticks = sticks.ToList().OrderBy(x => x).ToArray();
+            for (int k = 0; k < n - 1; k++)
+            {
+                sticks[k + 1] = sticks[k] + sticks[k + 1];
+                sum = sum + sticks[k + 1];
+                for (int i = k + 1; i < n - 1; i++)
+                {
+                    if (sticks[i] > sticks[i + 1])
+                    {
+                        int temp = sticks[i];
+                        sticks[i] = sticks[i + 1];
+                        sticks[i + 1] = temp;
+                    }
+                }
+
+            }
+
+            return sum;
+        }
+
+
+        #endregion
+
+        #region valid Prenthesis
+
+        public static  bool IsValidParenthesis(string s)
+        {
+            Dictionary<char, char> dict = new Dictionary<char, char>();
+            dict.Add(')', '(');
+            dict.Add(']', '[');
+            dict.Add('}', '{');
+            bool isValid = true;
+            Stack<char> stack = new Stack<char>();
+            foreach (char c in s)
+            {
+                //closing bracket
+                if (dict.ContainsKey(c))
+                {
+                    if (stack.Count!=0) {
+                        var item = stack.Pop();
+                        if (item != dict[c])
+                        {
+                            isValid = false;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        isValid = false;
+                        break;
+                    }
+                }
+                else
+                {
+                    stack.Push(c);
+                }
+            }
+
+            return isValid && stack.Count == 0;
         }
 
         #endregion
