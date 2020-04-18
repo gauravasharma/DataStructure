@@ -522,5 +522,34 @@ namespace MSTestProject
             int i =cache.Get(1);
             int j = cache.Get(2);
         }
+
+
+        [TestMethod]
+        public void GroupAnagram()
+        {
+            var item = StringProblem.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+
+        }
+        [TestMethod]
+        public void MostCommonWord()
+        {
+            var paragraph = "a, a, a, a, b,b,b,c, c";
+            var item = StringProblem.MostCommonWord(paragraph,new string[] { "a"});
+
+        }
+        [TestMethod]
+        public void MinStack()
+        {
+            MinStack minStack = new MinStack();
+            minStack.Push(-2);
+            minStack.Push(0);
+            minStack.Push(-3);
+            int i=minStack.GetMin(); // return -3
+            minStack.Pop();
+            minStack.Top();    // return 0
+            int j=minStack.GetMin(); // return -2
+
+        }
+
     }
 }

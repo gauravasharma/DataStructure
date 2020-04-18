@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace StringProblems
@@ -134,5 +136,68 @@ namespace StringProblems
         }
 
         #endregion
+
+        #region Group Anagrams
+
+        public static IList<IList<string>> GroupAnagrams(string[] strs)
+        {
+            IList<IList<string>> result= new List<IList<string>>();
+            Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
+            if (strs.Length != 0)
+            {
+                foreach (var item in strs)
+                {
+                    char[] charArray = item.ToCharArray();
+                    Array.Sort(charArray);
+                    var key = new String(charArray);
+                    if (dict.ContainsKey(key))
+                    {
+                        var existing = dict[key];
+                        existing.Add(item);
+                        dict[key] = existing;
+                    }
+                    else
+                    {
+                        dict.Add(key,new List<string> { item});
+                    }
+                }
+            }
+            if (dict.Count!=0)
+            {
+                foreach (var item in dict)
+                {
+                    result.Add(dict[item.Key]);
+                }
+            }
+            return result;
+        }
+
+        #endregion
+
+        public static string MostCommonWord(string paragraph, string[] banned)
+        {
+            string str = string.Empty;
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+            var words = paragraph.Split(' ', ',').Where(x => !banned.Contains(x.TrimEnd(',', '.', '!', '\'').ToLower())).Select(x => x.ToLower());
+            //var words = paragraph.Split(' ').Where(x => !banned.Contains(x.TrimEnd(',','.','!','\'').ToLower())).Select(x => x.ToLower());
+            foreach (var word in words)
+            {
+                if (word.Length>0) {
+                    var w = word.TrimEnd(',', '.', '!', '\'');
+                    if (!dict.ContainsKey(w))
+                    {
+                        dict.Add(w, 1);
+                    }
+                    else
+                    {
+                        dict[w] = dict[w] + 1;
+                    }
+                }
+            }
+
+            var def = dict.OrderByDescending(x => x.Value).FirstOrDefault();
+
+            return def.Key != null ? def.Key : string.Empty;
+        }
     }
 }
