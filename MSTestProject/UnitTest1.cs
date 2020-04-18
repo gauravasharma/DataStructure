@@ -5,6 +5,7 @@ using ArrayProblems;
 using BinarySearchProblems;
 using DesignDataStructures;
 using StringProblems;
+using TreeProblems;
 
 namespace MSTestProject
 {
@@ -362,5 +363,193 @@ namespace MSTestProject
             var index = new int[] { 0, 1, 2, 2, 1 };
             var Target = ArrayProblem.CreateTargetArray(nums, index);
         }
+        [TestMethod]
+        public void TreeTraversalDFS()
+        {
+            BinaryTree tree = new BinaryTree(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+
+            var items1=TreeProblem.TraverseInOrder(tree.Root);
+            var itmes2 = TreeProblem.TraversePreOrder(tree.Root);
+            var itmes3 = TreeProblem.TraversePostOrder(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void TreeTraversalBFSUsingQueues()
+        {
+            BinaryTree tree = new BinaryTree(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+
+            var items = TreeProblem.BFSTraverseQueue(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void FindTreeHeight()
+        {
+            BinaryTree tree = new BinaryTree(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+
+            int height = TreeProblem.TreeHeight(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void BFSTraversalWithoutQueue()
+        {
+            BinaryTree tree = new BinaryTree(1);
+            tree.Root.Left = new Node(2);
+            tree.Root.Right = new Node(3);
+            tree.Root.Left.Left = new Node(4);
+            tree.Root.Left.Right = new Node(5);
+            var item = TreeProblem.BFSTraverse(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void LevelOrder()
+        {
+            BinaryTree tree = new BinaryTree(3);
+            tree.Root.Left = new Node(9);
+            tree.Root.Right = new Node(20);
+            tree.Root.Right.Left = new Node(15);
+            tree.Root.Right.Right = new Node(7);
+            var item = TreeProblem.LevelOrder(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void FloodFill()
+        {
+            //var arr = new int[3][];
+            //arr[0] = new int[] { 1, 1, 1 };
+            //arr[1] = new int[] { 1, 1, 0 };
+            //arr[2] = new int[] { 1, 0, 1 };
+
+            var arr = new int[2][];
+            arr[0] = new int[] { 0, 0, 0 };
+            arr[1] = new int[] { 0, 1, 1 };
+
+            var item = TreeProblem.FloodFill(arr, 1,1,1);
+
+        }
+
+        [TestMethod]
+        public void ISBST()
+        {
+            BinaryTree tree = new BinaryTree(2);
+            tree.Root.Left = new Node(1);
+            tree.Root.Right = new Node(3);
+
+            var items1 = TreeProblem.IsBST(tree.Root);
+
+        }
+
+        [TestMethod]
+        public void NumberOfIsland()
+        {
+            var arr = new int[3][];
+            arr[0] = new int[] { 1, 1, 1 };
+            arr[1] = new int[] { 1, 1, 0 };
+            arr[2] = new int[] { 1, 0, 1 };
+            var item = TreeProblem.NumberOfIslands(arr);
+
+        }
+        [TestMethod]
+        public void FindGCD()
+        {
+            var item = ArrayProblem.FindGCD(24, 36);
+        }
+
+        [TestMethod]
+        public void FindGCDOfArray()
+        {
+            var item = ArrayProblem.gcdOfArray(new int[] { 24,36},2);
+        }
+        [TestMethod]
+        public void FindLongestPalindrome()
+        {
+            var item = StringProblem.LongestPalindrome("forgeeksskeegfor");
+        }
+
+        [TestMethod]
+        public void FindMedian()
+        {
+            int[] arr1 = { 1, 2 };
+            int[] arr2 = { 3,4 };
+            var item = ArrayProblem.MedianOfSortedArray(arr1,arr2);
+        }
+        [TestMethod]
+        public void FindMissingNumber()
+        {
+            int[] arr1 = { 1,9,6,3,5,2 };
+            var item = ArrayProblem.MissingNumber1(arr1);
+        }
+
+        [TestMethod]
+        public void FindoptimalCost()
+        {
+            int[] arr1 = {2,4,3};
+            var item = ArrayProblem.FindOptimalCost(arr1);
+        }
+
+        [TestMethod]
+        public void FindValidParenthesis()
+        {
+            string s = "]";
+            var item = ArrayProblem.IsValidParenthesis(s);
+        }
+
+        [TestMethod]
+        public void VerifyLRUCache()
+        {
+            LRUCache cache = new LRUCache(2);
+            cache.Put(2, 1);
+            cache.Put(1, 1);
+            cache.Put(2,3);
+            cache.Put(4, 1);
+
+            int i =cache.Get(1);
+            int j = cache.Get(2);
+        }
+
+
+        [TestMethod]
+        public void GroupAnagram()
+        {
+            var item = StringProblem.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+
+        }
+        [TestMethod]
+        public void MostCommonWord()
+        {
+            var paragraph = "a, a, a, a, b,b,b,c, c";
+            var item = StringProblem.MostCommonWord(paragraph,new string[] { "a"});
+
+        }
+        [TestMethod]
+        public void MinStack()
+        {
+            MinStack minStack = new MinStack();
+            minStack.Push(-2);
+            minStack.Push(0);
+            minStack.Push(-3);
+            int i=minStack.GetMin(); // return -3
+            minStack.Pop();
+            minStack.Top();    // return 0
+            int j=minStack.GetMin(); // return -2
+
+        }
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Array
 {
-    class ArrayProblems
+    class ArrayProblems 
     {
         static void Main(string[] args)
         {

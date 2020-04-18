@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearchProblems", "Bin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringProblems", "StringProblems\StringProblems.csproj", "{1B28A99D-394D-4926-803E-F650B20B92C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignDataStructures", "DesignDataStructures\DesignDataStructures.csproj", "{4B7CFDED-8281-467C-9FBC-868E863CD346}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignDataStructures", "DesignDataStructures\DesignDataStructures.csproj", "{4B7CFDED-8281-467C-9FBC-868E863CD346}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeProblems", "TreeProblems\TreeProblems.csproj", "{79D8262B-9A62-45BD-A894-EF1C577F32CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{4B7CFDED-8281-467C-9FBC-868E863CD346}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B7CFDED-8281-467C-9FBC-868E863CD346}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B7CFDED-8281-467C-9FBC-868E863CD346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D8262B-9A62-45BD-A894-EF1C577F32CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D8262B-9A62-45BD-A894-EF1C577F32CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D8262B-9A62-45BD-A894-EF1C577F32CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D8262B-9A62-45BD-A894-EF1C577F32CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

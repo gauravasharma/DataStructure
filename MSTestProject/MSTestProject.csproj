@@ -74,6 +74,10 @@
       <Project>{1B28A99D-394D-4926-803E-F650B20B92C7}</Project>
       <Name>StringProblems</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TreeProblems\TreeProblems.csproj">
+      <Project>{79D8262B-9A62-45BD-A894-EF1C577F32CA}</Project>
+      <Name>TreeProblems</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
