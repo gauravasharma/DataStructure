@@ -17,11 +17,13 @@ namespace MSTestProject
         {
             LinkedList L1 = new LinkedList();
             L1.AddLast(2);
+            L1.AddLast(4);
             L1.AddLast(3);
 
             LinkedList L2 = new LinkedList();
-            L2.AddLast(1);
-            //L2.AddLast(9);
+            L2.AddLast(5);
+            L2.AddLast(6);
+            L2.AddLast(4);
 
             LListProblems.AddTwoNumbers(L1.Head, L2.Head);
         }
@@ -118,6 +120,19 @@ namespace MSTestProject
             L2.AddLast(4);
 
             var head = LListProblems.MergeTwoSortedList(L1.Head, L2.Head);
+            var head1 = LListProblems.MergeList(L1.Head, L2.Head);
+        }
+        [TestMethod]
+        public void ReverseKGroup()
+        {
+            LinkedList L1 = new LinkedList();
+            L1.AddLast(1);
+            L1.AddLast(2);
+            L1.AddLast(3);
+            L1.AddLast(4);
+            L1.AddLast(5);
+
+            var head = LListProblems.ReverseKGroup(L1.Head,2);
         }
 
         [TestMethod]
@@ -452,17 +467,18 @@ namespace MSTestProject
             tree.Root.Right = new Node(3);
 
             var items1 = TreeProblem.IsBST(tree.Root);
+            var items2 = TreeProblem.IsValidBSTree(tree.Root);
 
         }
 
         [TestMethod]
         public void NumberOfIsland()
         {
-            var arr = new int[3][];
-            arr[0] = new int[] { 1, 1, 1 };
-            arr[1] = new int[] { 1, 1, 0 };
-            arr[2] = new int[] { 1, 0, 1 };
-            var item = TreeProblem.NumberOfIslands(arr);
+            var arr = new char[3][];
+            arr[0] = new char[] { '1', '1', '1' };
+            arr[1] = new char[] { '1', '1', '0' };
+            arr[2] = new char[] { '1', '0', '1' };
+            var item = TreeProblem.NumIslands(arr);
 
         }
         [TestMethod]
@@ -551,5 +567,35 @@ namespace MSTestProject
 
         }
 
+        [TestMethod]
+        public void ReverseWords()
+        {
+            //Input: "the sky is blue"
+            //Output: "blue is sky the"
+            string s = "the sky is blue";
+            var item = StringProblem.ReverseWords(s);
+        }
+
+        [TestMethod]
+        public void ProductExceptSelf()
+        {
+            var item = ArrayProblem.ProductExceptSelf(new int[] { 1,2,3,4 });
+        }
+
+        [TestMethod]
+        public void TopKFrequent()
+        {
+            var item = ArrayProblem.TopKFrequent(new int[] { 3,0,1,0 },1);
+        }
+
+        [TestMethod]
+        public void MinPathSum()
+        {
+            var arr = new int[3][];
+            arr[0] = new int[] { 1,3,1 };
+            arr[1] = new int[] {1,5,1 };
+            arr[2] = new int[] { 4,2,1 };
+            var item = ArrayProblem.MinPathSum(arr);
+        }
     }
 }

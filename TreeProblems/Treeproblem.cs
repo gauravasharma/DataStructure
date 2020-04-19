@@ -252,44 +252,65 @@ namespace TreeProblems
         }
         #endregion
 
+        #region CheckBinaryTreeUsingInorderTraversal
+
+        static Node previous = null;
+        static bool isValid = true;
+        public static bool IsValidBSTree(Node root)
+        {
+            if(root==null || !isValid)
+            {
+                return false;
+            }
+            IsValidBSTree(root.Left);
+            if (previous!=null && previous.Data> root.Data)
+            {
+                isValid = false;
+            }
+            previous = root;
+            IsValidBSTree(root.Right);
+            return isValid;
+        }
+
+        #endregion
+
         #region NumberOfIslands
 
-        public static int NumberOfIslands(int [][] grid)
+        public static int NumIslands(char[][] grid)
         {
-            int numOfIslands = 0;
-            if(grid==null || grid.Length==0)
+            int num = 0;
+            if (grid == null || grid.Length == 0)
             {
-                return numOfIslands;
+                return 0;
             }
-            
-            for (int i = 0; i < grid.Length; i++ )
+
+            for (int i = 0; i < grid.Length; i++)
             {
-                for(int j = 0; j < grid[0].Length; j++)
+                for (int j = 0; j < grid[0].Length; j++)
                 {
-                    if (grid[i][j] ==1) {
-                        numOfIslands++;
-                        DFSGrid(grid, j, 0);
+                    if (grid[i][j] == '1')
+                    {
+                        num++;
+                        DFSFill(grid, i, j);
                     }
                 }
             }
-
-            return numOfIslands;
+            return num;
         }
 
-        private static void DFSGrid(int[][] grid, int r, int c )
+        private static void DFSFill(char[][] grid, int r, int c)
         {
-            int row = grid.Length-1;
-            int col = grid[0].Length-1;
-
-            if (r<0 || r>row || c<0 || c>col || grid[r][c] == 0)
+            if (r < 0 || r >= grid.Length || c < 0 || c >= grid[0].Length || grid[r][c] == '0')
             {
                 return;
             }
-            grid[r][c] = 0;
-            DFSGrid(grid,r-1, c);
-            DFSGrid(grid, r +1, c);
-            DFSGrid(grid, r, c-1);
-            DFSGrid(grid, r, c+1);
+
+            grid[r][c] = '0';
+
+            DFSFill(grid, r - 1, c);
+            DFSFill(grid, r + 1, c);
+            DFSFill(grid, r, c - 1);
+            DFSFill(grid, r, c + 1);
         }
 
         #endregion

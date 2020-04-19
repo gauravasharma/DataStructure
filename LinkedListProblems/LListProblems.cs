@@ -94,6 +94,46 @@ namespace LinkedListProblems
         }
         #endregion
 
+        public static ListNode ReverseKGroup(ListNode head, int k)
+        {
+            ListNode current = head;
+            ListNode next = null;
+            ListNode prev = null;
+
+            int length = 0;
+
+            while (current!=null)
+            {
+                length++;
+                current = current.next;
+            }
+            current = head;
+
+            int count = 0;
+            if (k>length)
+            {
+                return head;
+            }
+            /* Reverse first k nodes of linked list */
+            while (count < k && current != null)
+            {
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+                count++;
+            }
+
+            /* next is now a pointer to (k+1)th node  
+                Recursively call for the list starting from current.  
+                And make rest of the list as next of first node */
+            if (next != null)
+                head.next = ReverseKGroup(next, k);
+
+            // prev is now head of input list  
+            return prev;
+        }
+
         #region delete a nodde from Linked list.
 
         //1->2->3->4->5->6
@@ -442,6 +482,53 @@ namespace LinkedListProblems
 
             return head;
         }
+        #endregion
+
+        #region Merge two Sorted List using recursion
+
+        public static ListNode MergeList(ListNode l1, ListNode l2)
+        {
+            if (l1 == null)
+            {
+                return l2;
+            }
+            else if (l2 == null)
+            {
+                return l1;
+            }
+            else if (l1.val<l2.val)
+            {
+                l1.next = MergeList(l1.next, l2);
+                return l1;
+            }
+            else
+            {
+                l2.next = MergeList(l1, l2.next);
+                return l2;
+            }
+        }
+
+        #endregion
+
+        #region Merge K Sorted List
+
+        public static ListNode MergeKSortedList(ListNode[] lists)
+        {
+            ListNode Head = null;
+            int length = lists.Length;
+            ListNode result = null;
+            for (int i=0; i<length-1; i++)
+            {
+                if(result==null)
+                {
+                    result = lists[0];
+                }
+                result = MergeList(result, lists[i+1]);
+            }
+
+            return Head;
+        }
+
         #endregion
 
         #region remove Duplicates from the Sorted Linked list.
