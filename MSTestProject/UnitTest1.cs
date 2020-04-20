@@ -292,7 +292,7 @@ namespace MSTestProject
         public void BinarySearchWithoutRecursion()
         {
             int[] nums = { -1,0,3,5,9,12};
-            int pos = BinarySearchProblem.FindPosition(nums, 2);
+            int pos = BinarySearchProblem.FindPosition(nums, 9);
         }
 
         [TestMethod]
@@ -597,5 +597,36 @@ namespace MSTestProject
             arr[2] = new int[] { 4,2,1 };
             var item = ArrayProblem.MinPathSum(arr);
         }
+        [TestMethod]
+        public void WordExits()
+        {
+            //var arr = new Char[3][];
+            //arr[0] = new Char[] { 'A', 'B', 'C', 'E' };
+            //arr[1] = new Char[] { 'S', 'F', 'C', 'S' };
+            //arr[2] = new Char[] { 'A', 'D', 'E', 'E' };
+            //var item = TreeProblem.WordExist(arr, "ABCCED");
+            //var item = TreeProblem.WordExist(arr, "SEE");
+
+            var arr = new Char[3][];
+            arr[0] = new Char[] { 'C', 'A', 'A' };
+            arr[1] = new Char[] { 'A', 'A', 'A' };
+            arr[2] = new Char[] { 'B', 'C', 'D' };
+            var item = TreeProblem.WordExist(arr, "AAB");
+
+
+        }
+
+        [TestMethod]
+        public void ShortespathToTreasure()
+        {
+            var arr = new Char[4][];
+            arr[0] = new Char[] { 'O', 'O', 'O', 'O' };
+            arr[1] = new Char[] { 'D', 'O', 'D', 'O' };
+            arr[2] = new Char[] { 'O', 'O', 'O', 'O' };
+            arr[3] = new Char[] { 'X', 'D', 'D', 'O' };
+            var item = TreeProblem.shortPath(arr);
+
+        }
+
     }
 }

@@ -96,12 +96,12 @@ namespace TreeProblems
             treeData = new List<int>();
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(root);
-            while (queue.Count!=0)
+            while (queue.Count != 0)
             {
                 var node = queue.Dequeue();
                 treeData.Add(node.Data);
 
-                if (node.Left!=null)
+                if (node.Left != null)
                 {
                     queue.Enqueue(node.Left);
                 }
@@ -137,7 +137,7 @@ namespace TreeProblems
 
         private static void BFS(Node node, int level)
         {
-            if (node==null)
+            if (node == null)
             {
                 return;
             }
@@ -195,13 +195,13 @@ namespace TreeProblems
         public static int[][] FloodFill(int[][] image, int sr, int sc, int newColor)
         {
 
-            if (image[sr][sc]!= newColor) {
+            if (image[sr][sc] != newColor) {
                 fill(image, sr, sc, image[sr][sc], newColor);
             }
             return image;
         }
 
-        private  static void fill(int[][] image, int x, int y, int prevColor, int newColor)
+        private static void fill(int[][] image, int x, int y, int prevColor, int newColor)
         {
             if (x < 0 || x >= image.Length || y < 0 || y >= image[0].Length)
             {
@@ -229,9 +229,9 @@ namespace TreeProblems
         private static Node prev;
         public static bool IsBST(Node root)
         {
-           
-          prev = null;
-          return IsBinaryTree(root);
+
+            prev = null;
+            return IsBinaryTree(root);
 
         }
         private static bool IsBinaryTree(Node node)
@@ -258,12 +258,12 @@ namespace TreeProblems
         static bool isValid = true;
         public static bool IsValidBSTree(Node root)
         {
-            if(root==null || !isValid)
+            if (root == null || !isValid)
             {
                 return false;
             }
             IsValidBSTree(root.Left);
-            if (previous!=null && previous.Data> root.Data)
+            if (previous != null && previous.Data > root.Data)
             {
                 isValid = false;
             }
@@ -313,6 +313,141 @@ namespace TreeProblems
             DFSFill(grid, r, c + 1);
         }
 
+        #endregion
+
+        #region DiameterOfBinaryTree
+        public static int DiameterOfBinaryTree(Node root)
+        {
+            int l = 0;
+            int r = 0;
+            int d = 0;
+            if (root == null)
+            {
+                return 0;
+            }
+
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(root);
+            while (queue.Count != 0)
+            {
+                var node = queue.Dequeue();
+                var leftNode = node.Left;
+                var rightNode = node.Right;
+                l = TreeHeight(leftNode);
+                r = TreeHeight(rightNode);
+                d = Math.Max(d, l + r);
+
+                if (node.Left != null)
+                {
+                    queue.Enqueue(node.Left);
+                }
+                if (node.Right != null)
+                {
+                    queue.Enqueue(node.Right);
+                }
+            }
+
+            return d;
+        }
+        #endregion
+
+        #region WordSearch
+        public static bool WordExist(char[][] board, string word)
+        {
+            if (board == null || board.Length == 0 || word.Length> board[0].Length* board.Length)
+            {
+                return false;
+            }
+            for (int i = 0; i < board.Length; i++)
+            {
+                for (int j = 0; j < board[0].Length; j++)
+                {
+                    if (word[0] == board[i][j])
+                    {
+                        if (WordSearch(board, i, j, word, 0)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
+
+        }
+
+        private static bool WordSearch(char[][] board, int i, int j, string Target, int level)
+        {
+            int row = board.Length - 1;
+            int col = board[0].Length - 1;
+
+            if (level==Target.Length)
+            {
+                return true;
+            }
+
+            if (i < 0 || i > row || j < 0 || j > col)
+            {
+                return false;
+            }
+
+            if(Target[level]== board[i][j])
+            {
+                char temp = board[i][j];
+                board[i][j] = '#';
+                bool res =  WordSearch(board, i + 1, j, Target, level + 1) |
+                            WordSearch(board, i - 1, j, Target, level + 1) |
+                            WordSearch(board, i, j + 1, Target, level + 1) |
+                            WordSearch(board, i, j - 1, Target, level + 1);
+               board[i][j] = temp;
+               return res;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        #endregion
+
+        #region FindTreasure
+
+
+        public static int shortPath(char[][] land)
+        {
+            if (land==null)
+            {
+                return -1;
+            }
+
+            ShortestPathToTreasure(land, 0,0,0);
+            return minPath;
+        }
+
+        static int minPath = int.MaxValue;
+        public static void ShortestPathToTreasure(char [][]land, int i ,int j, int level)
+        {
+            int row = land.Length - 1;
+            int col = land[0].Length - 1;
+
+            if (i < 0 || i > row || j<0 || j>col || land[i][j]=='D' || land[i][j] == '#')
+            {
+                return;
+            }
+            
+            if (land[i][j] == 'X')
+            {
+                minPath= Math.Min(minPath, level);
+            }
+
+            var temp = land[i][j];
+            land[i][j] = '#';
+            ShortestPathToTreasure(land, i+1,j, level+1);
+            ShortestPathToTreasure(land, i-1, j, level + 1);
+            ShortestPathToTreasure(land, i, j+1, level + 1);
+            ShortestPathToTreasure(land, i, j-1, level + 1);
+            land[i][j] = temp;
+        }
+       
         #endregion
     }
 }
