@@ -364,7 +364,7 @@ namespace TreeProblems
                 {
                     if (word[0] == board[i][j])
                     {
-                        if (WordSearch(board, i, j, word, 0)) {
+                        if (isPresent(board, i, j, word, 0)) {
                             return true;
                         }
                     }
@@ -375,36 +375,40 @@ namespace TreeProblems
 
         }
 
-        private static bool WordSearch(char[][] board, int i, int j, string Target, int level)
+        private static bool isPresent(char[][] board, int x, int y, string Target, int Level)
         {
-            int row = board.Length - 1;
-            int col = board[0].Length - 1;
-
-            if (level==Target.Length)
+            int row = board.Length;
+            int col = board[0].Length;
+            if (Level == Target.Length)
             {
                 return true;
             }
-
-            if (i < 0 || i > row || j < 0 || j > col)
+            if (x < 0 || x >= row || y < 0 || y >= col || board[x][y] != Target[Level])
             {
                 return false;
             }
 
-            if(Target[level]== board[i][j])
+            var res = false;
+            char temp = board[x][y];
+            board[x][y] = '#';
+            if (isPresent(board, x - 1, y, Target, Level + 1))
             {
-                char temp = board[i][j];
-                board[i][j] = '#';
-                bool res =  WordSearch(board, i + 1, j, Target, level + 1) |
-                            WordSearch(board, i - 1, j, Target, level + 1) |
-                            WordSearch(board, i, j + 1, Target, level + 1) |
-                            WordSearch(board, i, j - 1, Target, level + 1);
-               board[i][j] = temp;
-               return res;
+                res = true;
             }
-            else
+            else if (isPresent(board, x + 1, y, Target, Level + 1))
             {
-                return false;
+                res = true;
             }
+            else if (isPresent(board, x, y - 1, Target, Level + 1))
+            {
+                res = true;
+            }
+            else if (isPresent(board, x, y + 1, Target, Level + 1))
+            {
+                res = true;
+            }
+            board[x][y] = temp;
+            return res;
 
         }
         #endregion
