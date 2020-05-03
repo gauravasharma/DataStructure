@@ -874,7 +874,7 @@ namespace ArrayProblems
 
         #endregion
 
-        #region Optimal Utilization
+        #region Optimal cost
 
         public static int FindOptimalCost(int [] sticks)
         {
@@ -941,6 +941,88 @@ namespace ArrayProblems
             return isValid && stack.Count == 0;
         }
 
+        #endregion
+
+        #region productExceptSelf
+        public static int[] ProductExceptSelf(int[] nums)
+        {
+
+            int n = nums.Length;
+            int[] result = new int[n];
+            int[] left = new int[n];
+            int[] right = new int[n];
+
+            left[0] = 1;
+            for (int i = 1; i < n; i++)
+            {
+                left[i] = left[i - 1] * nums[i - 1];
+            }
+
+            right[n - 1] = 1;
+            for (int j = n - 2; j >= 0; j--)
+            {
+                right[j] = right[j + 1] * nums[j + 1];
+            }
+
+            for (int k = 0; k < n; k++)
+            {
+                result[k] = left[k] * right[k];
+            }
+
+            return result;
+        }
+        #endregion
+
+        #region Top K Frequent
+        public static IList<int> TopKFrequent(int[] nums, int k)
+        {
+
+            IList<int> list = new List<int>();
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int value = nums[i];
+                if (!dict.ContainsKey(value))
+                {
+                    dict.Add(value, 1);
+                }
+                else
+                {
+                    dict[value] = dict[value] + 1;
+                }
+            }
+            list = dict.Where(x => x.Value >= k).OrderByDescending(x => x.Value).Take(k).Select(x => x.Key).ToList();
+            return list.Count == 0 ? nums.ToList() : list;
+        }
+        #endregion
+
+        #region MinPathSum
+        public static int MinPathSum(int[][] grid)
+        {
+
+            int[][] sol = new int[grid.Length][];
+            for (int i = 0; i < sol.Length; i++)
+            {
+                sol[i] = new int[grid[0].Length];
+            }
+            return Calculate(grid, 0, 0, sol);
+        }      
+        public static int Calculate(int[][] grid, int i, int j, int[][] sol)
+        {
+            if (i == grid.Length || j == grid[0].Length) return int.MaxValue;
+            if (sol[i][j] > 0)
+            {
+                return sol[i][j];
+            }
+            if (i == grid.Length - 1 && j == grid[0].Length - 1) return grid[i][j];
+
+            int r = Calculate(grid, i + 1, j, sol);
+            int d = Calculate(grid, i, j + 1, sol);
+            sol[i][j] = grid[i][j] + Math.Min(r, d);
+            return sol[i][j];
+
+        }
         #endregion
     }
 }

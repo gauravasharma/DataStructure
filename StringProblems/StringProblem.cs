@@ -174,6 +174,7 @@ namespace StringProblems
 
         #endregion
 
+        #region Most Common Words
         public static string MostCommonWord(string paragraph, string[] banned)
         {
             string str = string.Empty;
@@ -182,7 +183,8 @@ namespace StringProblems
             //var words = paragraph.Split(' ').Where(x => !banned.Contains(x.TrimEnd(',','.','!','\'').ToLower())).Select(x => x.ToLower());
             foreach (var word in words)
             {
-                if (word.Length>0) {
+                if (word.Length > 0)
+                {
                     var w = word.TrimEnd(',', '.', '!', '\'');
                     if (!dict.ContainsKey(w))
                     {
@@ -199,5 +201,30 @@ namespace StringProblems
 
             return def.Key != null ? def.Key : string.Empty;
         }
+        #endregion
+
+        #region Reverse Words
+
+        public static  string ReverseWords(string s)
+        {
+
+            string[] sentence = s.Trim().Split(' ').Where(x => x.Length > 0).Select(x => x.Trim()).ToArray();
+
+            int start = 0;
+            int end = sentence.Length - 1;
+
+            while (start < end)
+            {
+                string temp = sentence[start];
+                sentence[start] = sentence[end];
+                sentence[end] = temp;
+                start++;
+                end--;
+            }
+
+            return String.Join(" ", sentence);
+        }
+        #endregion
+
     }
 }
