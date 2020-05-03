@@ -10,7 +10,6 @@ C:\Users\gss1201\source\repos\DataStructure\BinarySearch\obj\Debug\netstandard2.
 D:\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.deps.json
 D:\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.dll
 D:\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.pdb
-D:\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.csprojAssemblyReference.cache
 D:\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.csproj.CoreCompileInputs.cache
 D:\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.AssemblyInfoInputs.cache
 D:\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.AssemblyInfo.cs

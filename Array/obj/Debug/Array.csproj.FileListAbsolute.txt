@@ -11,3 +11,4 @@ D:\DataStructure\Array\bin\Debug\Array.pdb
 D:\DataStructure\Array\obj\Debug\Array.csproj.CoreCompileInputs.cache
 D:\DataStructure\Array\obj\Debug\Array.exe
 D:\DataStructure\Array\obj\Debug\Array.pdb
+D:\DataStructure\Array\obj\Debug\Array.csprojAssemblyReference.cache
