@@ -1,0 +1,12 @@
+D:\DataStructure\TreeProblems\bin\Debug\netstandard2.0\TreeProblems.deps.json
+D:\DataStructure\TreeProblems\bin\Debug\netstandard2.0\TreeProblems.dll
+D:\DataStructure\TreeProblems\bin\Debug\netstandard2.0\TreeProblems.pdb
+D:\DataStructure\TreeProblems\bin\Debug\netstandard2.0\DesignDataStructures.dll
+D:\DataStructure\TreeProblems\bin\Debug\netstandard2.0\DesignDataStructures.pdb
+D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.csprojAssemblyReference.cache
+D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.csproj.CoreCompileInputs.cache
+D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.AssemblyInfoInputs.cache
+D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.AssemblyInfo.cs
+D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.csproj.CopyComplete
+D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.dll
+D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.pdb

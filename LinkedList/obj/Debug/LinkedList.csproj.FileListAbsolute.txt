@@ -5,3 +5,9 @@ C:\Users\gss1201\source\repos\DataStructure\LinkedList\obj\Debug\LinkedList.cspr
 C:\Users\gss1201\source\repos\DataStructure\LinkedList\obj\Debug\LinkedList.exe
 C:\Users\gss1201\source\repos\DataStructure\LinkedList\obj\Debug\LinkedList.pdb
 C:\Users\gss1201\source\repos\DataStructure\LinkedList\obj\Debug\LinkedList.csprojAssemblyReference.cache
+D:\DataStructure\LinkedList\bin\Debug\LinkedList.exe.config
+D:\DataStructure\LinkedList\bin\Debug\LinkedList.exe
+D:\DataStructure\LinkedList\bin\Debug\LinkedList.pdb
+D:\DataStructure\LinkedList\obj\Debug\LinkedList.csproj.CoreCompileInputs.cache
+D:\DataStructure\LinkedList\obj\Debug\LinkedList.exe
+D:\DataStructure\LinkedList\obj\Debug\LinkedList.pdb

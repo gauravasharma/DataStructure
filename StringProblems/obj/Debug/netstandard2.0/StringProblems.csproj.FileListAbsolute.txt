@@ -7,3 +7,11 @@ C:\Users\gss1201\source\repos\DataStructure\StringProblems\obj\Debug\netstandard
 C:\Users\gss1201\source\repos\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.AssemblyInfo.cs
 C:\Users\gss1201\source\repos\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.dll
 C:\Users\gss1201\source\repos\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.pdb
+D:\DataStructure\StringProblems\bin\Debug\netstandard2.0\StringProblems.deps.json
+D:\DataStructure\StringProblems\bin\Debug\netstandard2.0\StringProblems.dll
+D:\DataStructure\StringProblems\bin\Debug\netstandard2.0\StringProblems.pdb
+D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.csproj.CoreCompileInputs.cache
+D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.AssemblyInfoInputs.cache
+D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.AssemblyInfo.cs
+D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.dll
+D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.pdb
