@@ -628,5 +628,14 @@ namespace MSTestProject
 
         }
 
+        [TestMethod]
+        public void ReorderList()
+        {
+            LinkedList L1 = new LinkedList();
+            L1.AddLast(0);
+            L1.AddLast(0);
+            var head = LListProblems.IsPalindrome(L1.Head);
+        }
+
     }
 }

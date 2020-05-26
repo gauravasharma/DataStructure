@@ -758,5 +758,74 @@ namespace LinkedListProblems
         }
 
         #endregion
+
+        #region  ReOrder List
+
+        public static ListNode ReorderList(ListNode head)
+        {
+
+            if (head == null)
+            {
+                return head;
+            }
+            var middle = GetMiddleNode(head);
+
+            var newnode = ReverseLinkedList(middle);
+
+            var nd= MergeListSpecial(head, newnode);
+
+            return head;
+        }
+
+        public static ListNode MergeListSpecial(ListNode l1, ListNode l2)
+        {
+            if (l1 == null)
+            {
+                return l2;
+            }
+            else if (l2 == null)
+            {
+                return l1;
+            }
+            else 
+            {
+                l1.next = MergeListSpecial(l2, l1.next);
+                return l1;
+            }
+        }
+        #endregion
+
+        #region IsPalindrome
+
+        public static bool IsPalindrome(ListNode head)
+        {
+
+            if (head == null || head.next == null)
+            {
+                return true;
+            }
+
+            Stack<int> stack = new Stack<int>();
+            var current = head;
+            while (current != null)
+            {
+                stack.Push(current.val);
+                current = current.next;
+            }
+
+            current = head;
+
+            while (current != null)
+            {
+                if (stack.Pop() != current.val)
+                {
+                    return false;
+                }
+
+                current = current.next;
+            }
+            return true;
+        }
+        #endregion
     }
 }

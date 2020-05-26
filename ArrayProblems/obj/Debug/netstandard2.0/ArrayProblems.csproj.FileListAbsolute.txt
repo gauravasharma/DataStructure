@@ -7,3 +7,11 @@ C:\Users\gss1201\source\repos\DataStructure\ArrayProblems\obj\Debug\netstandard2
 C:\Users\gss1201\source\repos\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.AssemblyInfo.cs
 C:\Users\gss1201\source\repos\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.dll
 C:\Users\gss1201\source\repos\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.pdb
+C:\DataStructure\ArrayProblems\bin\Debug\netstandard2.0\ArrayProblems.deps.json
+C:\DataStructure\ArrayProblems\bin\Debug\netstandard2.0\ArrayProblems.dll
+C:\DataStructure\ArrayProblems\bin\Debug\netstandard2.0\ArrayProblems.pdb
+C:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.csprojAssemblyReference.cache
+C:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.AssemblyInfoInputs.cache
+C:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.AssemblyInfo.cs
+C:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.dll
+C:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.pdb
