@@ -6,6 +6,7 @@ using BinarySearchProblems;
 using DesignDataStructures;
 using StringProblems;
 using TreeProblems;
+using System.Collections.Generic;
 
 namespace MSTestProject
 {
@@ -635,6 +636,23 @@ namespace MSTestProject
             L1.AddLast(0);
             L1.AddLast(0);
             var head = LListProblems.IsPalindrome(L1.Head);
+        }
+
+        [TestMethod]
+        public void StackImplementation()
+        {
+            StackAndQueues.Stack _stack = new StackAndQueues.Stack();
+            _stack.Push(1);
+            _stack.Push(2);
+            _stack.Push(3);
+            _stack.Push(4);
+
+            List<int> list = new List<int>();
+            while (_stack.Peek()!=null)
+            {
+                var value = _stack.Pop();
+                list.Add(value);
+            }
         }
 
     }

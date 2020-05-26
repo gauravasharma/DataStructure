@@ -70,6 +70,10 @@
       <Project>{4b7cfded-8281-467c-9fbc-868e863cd346}</Project>
       <Name>DesignDataStructures</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StackAndQueues\StackAndQueues.csproj">
+      <Project>{442e230e-f2b1-4673-896e-9d2671ebb663}</Project>
+      <Name>StackAndQueues</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StringProblems\StringProblems.csproj">
       <Project>{1B28A99D-394D-4926-803E-F650B20B92C7}</Project>
       <Name>StringProblems</Name>

@@ -15,3 +15,11 @@ D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.Assembly
 D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.AssemblyInfo.cs
 D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.dll
 D:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.pdb
+C:\DataStructure\StringProblems\bin\Debug\netstandard2.0\StringProblems.deps.json
+C:\DataStructure\StringProblems\bin\Debug\netstandard2.0\StringProblems.dll
+C:\DataStructure\StringProblems\bin\Debug\netstandard2.0\StringProblems.pdb
+C:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.csprojAssemblyReference.cache
+C:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.AssemblyInfoInputs.cache
+C:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.AssemblyInfo.cs
+C:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.dll
+C:\DataStructure\StringProblems\obj\Debug\netstandard2.0\StringProblems.pdb
