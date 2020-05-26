@@ -655,5 +655,24 @@ namespace MSTestProject
             }
         }
 
+        [TestMethod]
+        public void QueueImplementationUsingStack()
+        {
+            StackAndQueues.Queue queue = new StackAndQueues.Queue();
+            queue.Push(1);
+            queue.Push(2);
+            queue.Push(3);
+            queue.Push(4);
+
+            List<int> list = new List<int>();
+            while (queue.Peek() != null)
+            {
+                var value = queue.Pop();
+                list.Add(value);
+            }
+        }
+
+
+
     }
 }
