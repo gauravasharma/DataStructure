@@ -1,1 +1,7 @@
 .vs/
+*.dll
+*.pdb
+*.cache
+*.CopyComplete
+*.exe
+*.xml

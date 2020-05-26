@@ -5,9 +5,10 @@ C:\Users\gss1201\source\repos\DataStructure\Array\obj\Debug\Array.csprojAssembly
 C:\Users\gss1201\source\repos\DataStructure\Array\obj\Debug\Array.csproj.CoreCompileInputs.cache
 C:\Users\gss1201\source\repos\DataStructure\Array\obj\Debug\Array.exe
 C:\Users\gss1201\source\repos\DataStructure\Array\obj\Debug\Array.pdb
-C:\DataStructure\Array\bin\Debug\Array.exe.config
-C:\DataStructure\Array\bin\Debug\Array.exe
-C:\DataStructure\Array\bin\Debug\Array.pdb
-C:\DataStructure\Array\obj\Debug\Array.csprojAssemblyReference.cache
-C:\DataStructure\Array\obj\Debug\Array.exe
-C:\DataStructure\Array\obj\Debug\Array.pdb
+D:\DataStructure\Array\bin\Debug\Array.exe.config
+D:\DataStructure\Array\bin\Debug\Array.exe
+D:\DataStructure\Array\bin\Debug\Array.pdb
+D:\DataStructure\Array\obj\Debug\Array.csproj.CoreCompileInputs.cache
+D:\DataStructure\Array\obj\Debug\Array.exe
+D:\DataStructure\Array\obj\Debug\Array.pdb
+D:\DataStructure\Array\obj\Debug\Array.csprojAssemblyReference.cache
