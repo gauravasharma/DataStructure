@@ -839,5 +839,557 @@ namespace AmazonOnlineAssesment
             return cells;
         }
 
+        public static int ConnectRopes(int[] ropes)
+        {
+            int sum = 0;
+            int ropesum = 0;
+            Array.Sort(ropes);
+            int n = ropes.Length - 1;
+            for (int i = 0; i < n; i = i + 1)
+            {
+                ropesum = ropes[i] + ropes[i + 1];
+                ropes[i + 1] = ropesum;
+                Array.Sort(ropes, i + 1, (n - (i + 1)) + 1);
+
+
+                sum += ropesum;
+            }
+            return sum;
+        }
+        public static int GetHighestProfit(int[] supply, int k)
+        {
+            int n = supply.Length;
+            // Index of last non-leaf node 
+            int startIdx = (n / 2) - 1;
+            int max = 0;
+            // Perform reverse level order traversal 
+            // from last non-leaf node and heapify 
+            // each node 
+            for (int i = startIdx; i >= 0; i--)
+            {
+                Maxheapify(supply, n, i);
+            }
+
+            while (k > 0)
+            {
+                max += supply[0];
+                supply[0] -= 1;
+                Maxheapify(supply, n, 0);
+                k--;
+            }
+            return max;
+        }
+        static void Maxheapify(int[] arr, int n, int i)
+        {
+            int largest = i; // Initialize largest as root  
+            int l = 2 * i + 1; // left = 2*i + 1  
+            int r = 2 * i + 2; // right = 2*i + 2  
+
+            // If left child is larger than root  
+            if (l < n && arr[l] > arr[largest])
+                largest = l;
+
+            // If right child is larger than largest so far  
+            if (r < n && arr[r] > arr[largest])
+                largest = r;
+
+            // If largest is not root  
+            if (largest != i)
+            {
+                int swap = arr[i];
+                arr[i] = arr[largest];
+                arr[largest] = swap;
+
+                // Recursively heapify the affected sub-tree  
+                Maxheapify(arr, n, largest);
+            }
+        }
+
+        static void Minheapify(int[] arr, int n, int i)
+        {
+            int smallest = i; // Initialize largest as root  
+            int l = 2 * i + 1; // left = 2*i + 1  
+            int r = 2 * i + 2; // right = 2*i + 2  
+
+            // If left child is larger than root  
+            if (l < n && arr[l] < arr[smallest])
+                smallest = l;
+
+            // If right child is larger than largest so far  
+            if (r < n && arr[r] < arr[smallest])
+                smallest = r;
+
+            // If largest is not root  
+            if (smallest != i)
+            {
+                int swap = arr[i];
+                arr[i] = arr[smallest];
+                arr[smallest] = swap;
+                // Recursively heapify the affected sub-tree  
+                Minheapify(arr, n, smallest);
+            }
+        }
+        public static int ShortestDistance(string[] words, string word1, string word2)
+        {
+            int min = int.MaxValue;
+            int dist = 0;
+            int i1, i2;
+            i1 = i2 = -1;
+            for (int i = 0; i < words.Length; i++)
+            {
+
+                if (words[i].Equals(word1))
+                    i1 = i;
+                if (words[i].Equals(word2))
+                    i2 = i;
+                if (i1 > -1 && i2 > -1)
+                    dist = Math.Abs(i1 - i2);
+                if (dist != 0)
+                    min = dist < min ? dist : min;
+            }
+
+            return dist;
+        }
+
+        public static int[][] GenerateMatrix(int n)
+        {
+
+            int[][] seen = new int[n][];
+            for (int p = 0; p < n; p++)
+            {
+                seen[p] = new int[n];
+            }
+            int[] dr = new int[] { 0, 1, 0, -1 };
+            int[] dc = new int[] { 1, 0, -1, 0 };
+
+            int di = 0;
+            int r = 0; int c = 0;
+            for (int k = 0; k < n * n; k++)
+            {
+
+                seen[r][c] = k + 1;
+                int cr = r + dr[di];
+                int cc = c + dc[di];
+                if (cr >= 0 && cr < n && cc >= 0 && cc < n && seen[cr][cc] == 0)
+                {
+                    r = cr;
+                    c = cc;
+
+                }
+                else
+                {
+                    di = (di + 1) % 4;
+                    r += dr[di];
+                    c += dc[di];
+                }
+
+            }
+
+            return seen;
+        }
+
+        public static IList<string> RemoveComments(string[] source)
+        {
+            IList<string> res = new List<string>();
+
+            for (int i = 0; i < source.Length; i++)
+            {
+                if (source[i].Contains("/*"))
+                {
+                    string before = source[i].Substring(0, source[i].IndexOf("/*"));
+                    int j = i;
+                    while (!source[j].Contains("*/"))
+                    {
+                        j++;
+                    }
+                    if (source[j].IndexOf("*/") + 2 < source[j].Length)
+                    {
+                        before += source[j].Substring(source[j].IndexOf("*/") + 2, source[j].Length - (source[j].IndexOf("*/") + 2));
+
+                    }
+                    if (before.Length > 0)
+                        res.Add(before);
+
+                    i = j;
+                    continue;
+                }
+
+                if (source[i].Contains("//"))
+                {
+                    string before = source[i].Substring(0, source[i].IndexOf("//"));
+                    res.Add(before);
+                }
+                res.Add(source[i]);
+            }
+            return res;
+        }
+
+        public static string CountAndSay(int n)
+        {
+            if (n == 1) return "1";
+
+            string baseString = "1";
+            int i = 1;
+
+            while (i < n)
+            {
+
+                baseString = GetCountedString(baseString);
+                i++;
+            }
+            return baseString;
+        }
+
+        public static string GetCountedString(string baseString)
+        {
+            if (baseString.Length == 1) return "1" + baseString[0];
+            char prev = baseString[0];
+            string res = string.Empty;
+            int count = 1;
+            for (int j = 1; j < baseString.Length; j++)
+            {
+
+
+                if (prev == baseString[j])
+                {
+                    count++;
+                }
+                else
+                {
+                    res = res + count.ToString() + prev;
+                    count = 1;
+                }
+                prev = baseString[j];
+            }
+
+            res = res + count.ToString() + prev;
+            return res;
+        }
+
+        public static int Calculate(string s)
+        {
+            if (s == null || s.Length < 1) return 0;
+            int len = s.Length;
+
+            Stack<int> stk = new Stack<int>();
+            int currentNo = 0;
+            char operation = '+';
+
+            for (int i = 0; i < len; i++)
+            {
+                char currentChar = s[i];
+                if (Char.IsDigit(currentChar))
+                {
+                    currentNo = (currentNo * 10) + (currentChar - '0');
+                }
+
+                if (!Char.IsDigit(currentChar) && !Char.IsWhiteSpace(currentChar) || i == len - 1)
+                {
+                    if (operation == '-')
+                    {
+                        stk.Push(-currentNo);
+                    }
+                    else if (operation == '+')
+                    {
+                        stk.Push(currentNo);
+                    }
+                    else if (operation == '*')
+                    {
+                        stk.Push(stk.Pop() * currentNo);
+                    }
+                    else if (operation == '/')
+                    {
+                        stk.Push(stk.Pop() / currentNo);
+                    }
+                    operation = currentChar;
+                    currentNo = 0;
+                }
+
+            }
+            int result = 0;
+            while (stk.Count != 0)
+            {
+                result += stk.Pop();
+            }
+            return result;
+        }
+
+        public static string DecodeAtIndex(string S, int K)
+        {
+            if (K == 0) return S[0].ToString();
+            int n = 0;
+            string temp = string.Empty;
+            string repStr = string.Empty;
+            for (int i = 0; i < S.Length; i++)
+            {
+                if (!char.IsDigit(S[i]))
+                {
+                    temp = temp + S[i];
+                }
+                else
+                {
+                    n = S[i] - '0';
+                    repStr = temp;
+                    while (n > 1)
+                    {
+                        temp = temp + repStr;
+                        if (temp.Length - 1 >= K)
+                        {
+                            return temp[K - 1].ToString();
+                        }
+                        n--;
+                    }
+                    n = 0;
+                }
+
+                if (temp.Length - 1 >= K)
+                {
+                    return temp[K - 1].ToString();
+                }
+            }
+
+
+            return temp[K - 1].ToString();
+
+        }
+
+        //public static string DecodeAtIndex(string S, int K)
+        //{
+        //    long N = 0;
+        //    int i;
+        //    for (i = 0; N < K; i++)
+        //        N = Char.IsDigit(S[i]) ? N * (S[i] - '0') : N + 1;
+
+        //    i--;
+        //    while (true)
+        //    {
+        //        if (Char.IsDigit(S[i]))
+        //        {
+        //            N = N / (S[i] - '0');
+        //            K = K % (int)N;
+        //        }
+        //        else if (K % N == 0)
+        //            return S[i].ToString();
+        //        else
+        //            N--;
+        //        i--;
+        //    }
+        //}
+
+        public static bool CanFinish(int numCourses, int[][] prerequisites)
+        {
+
+            List<int>[] graph = new List<int>[numCourses];
+
+            for (int i = 0; i <= numCourses - 1; i++)
+                graph[i] = new List<int>();
+
+            for (int i = 0; i < prerequisites.Length; i++)
+                graph[prerequisites[i][0]].Add(prerequisites[i][1]);
+
+
+
+            int[] visited = new int[numCourses];
+            for (int j = 0; j < numCourses; j++)
+            {
+                if (visited[j] == 0)
+                {
+                    if (isCyclic(graph, visited, j))
+                        return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool isCyclic(List<int>[] adj, int[] visited, int curr)
+        {
+            if (visited[curr] == 2)
+                return true;
+            visited[curr] = 2;
+
+            for (int i = 0; i < adj[curr].Count; i++)
+            {
+                if (visited[adj[curr][i]] != 1)
+                {
+                    if (isCyclic(adj, visited, adj[curr][i]))
+                        return true;
+                }
+            }
+            visited[curr] = 1;
+            return false;
+        }
+
+        public static string DecodeString(string s)
+        {
+
+            Stack<char> st = new Stack<char>();
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == ']')
+                {
+                    string news = String.Empty;
+
+                    while (st.Peek() != '[')
+                    {
+                        news = st.Pop() + news;
+                    }
+                    st.Pop();
+                    int n = 0;
+                    int b = 1;
+                    while (st.Count > 0 && Char.IsDigit(st.Peek()))
+                    {
+                        n = n + (st.Pop() - '0') * b;
+                        b *= 10;
+                    }
+
+                    while (n != 0)
+                    {
+                        for (int j = 0; j < news.Length; j++)
+                        {
+                            st.Push(news[j]);
+                        }
+                        n--;
+                    }
+                }
+                else
+                {
+                    st.Push(s[i]);
+                }
+            }
+            char[] result = new char[st.Count];
+            for (int i = st.Count - 1; i >= 0; i--)
+            {
+                result[i] = st.Pop();
+            }
+            return new string(result);
+        }
+
+        public static int TreasureIsland1(char[][] map)
+        {
+
+            if (map == null)
+            {
+                return -1;
+            }
+            DFS(map, 0, 0, 0);
+            return distance;
+        }
+
+
+        public static void DFS(char[][] map, int i, int j, int count)
+        {
+
+            if (i < 0 || i >= map.Length || j < 0 || j >= map[0].Length || map[i][j] == 'D' || map[i][j] == 'V')
+                return;
+
+            if (map[i][j] == 'X')
+            {
+                distance = Math.Min(distance, count);
+                return;
+            }
+            var tmp = map[i][j];
+            map[i][j] = 'V';
+            DFS(map, i + 1, j, count + 1);
+            DFS(map, i, j + 1, count + 1);
+            DFS(map, i - 1, j, count + 1);
+            DFS(map, i, j - 1, count + 1);
+            map[i][j] = tmp;
+
+
+        }
+
+        public static int TreasureIsland2(char[][] map)
+        {
+            if (map == null)
+            {
+                return -1;
+            }
+            for (int i = 0; i < map.Length; i++)
+            {
+                for (int j = 0; j < map[0].Length; j++)
+                {
+                    if (map[i][j] == 'S')
+                        DFS(map, i, j, 0);
+                }
+            }
+            return distance;
+        }
+
+        public static List<int[]> KClosestPostOffice(int[][] cord, int[] selfcord, int k)
+        {
+
+            Dictionary<int[], double> dict = new Dictionary<int[], double>();
+            for (int i = 0; i < cord.Length; i++)
+            {
+                var dist = Math.Sqrt((selfcord[0] - cord[i][0]) * (selfcord[0] - cord[i][0]) + (selfcord[1] - cord[i][1]) * (selfcord[1] - cord[i][1]));
+                if (!dict.ContainsKey(cord[i]))
+                {
+                    dict.Add(cord[i], dist);
+                }
+            }
+
+            return dict.OrderBy(x => x.Value).Select(y => y.Key).Take(k).ToList();
+        }
+
+        public static int RollDice(int[] arr)
+        {
+            int min = int.MaxValue;
+
+            Dictionary<int, int> RollCount = new Dictionary<int, int>();
+            RollCount.Add(1, 6);
+            RollCount.Add(2, 4);
+            RollCount.Add(3, 5);
+            RollCount.Add(4, 2);
+            RollCount.Add(5, 3);
+            RollCount.Add(6, 1);
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int j = i;
+                int count = 0;
+                while (j - 1 >= 0)
+                {
+                    if (arr[i] == arr[j]) count += 0;
+                    if (RollCount[arr[j]] == arr[i]) count += 2;
+                    else count += 1;
+                    j--;
+                }
+                j = i;
+                while (j + 1 < arr.Length)
+                {
+                    if (arr[i] == arr[j]) count += 0;
+                    if (RollCount[arr[j]] == arr[i]) count += 2;
+                    else count += 1;
+                    j++;
+                }
+                min = Math.Min(min, count);
+            }
+            return min;
+        }
+
+        public static Dictionary<string, List<string>> FavoriteGenres(Dictionary<string, List<string>> users, Dictionary<string, List<string>> genre)
+        {
+            Dictionary<string, List<string>> res = new Dictionary<string, List<string>>();
+            foreach (var kvp in users)
+            {
+                res.Add(kvp.Key, new List<string>());
+                for (int i = 0; i < kvp.Value.Count; i++)
+                {
+                    var typ = genre.Where(x => x.Value.Contains(kvp.Value[i])).Select(y => y.Key).First().ToString();
+                    res[kvp.Key].Add(typ);
+                }
+
+            }
+
+            foreach (var kvp in res)
+            {
+
+                var max = kvp.Value.GroupBy(x => x).Select(y => y.Count()).Max();
+                kvp.Value.RemoveAll(x => x.GroupBy(x => x).Any(o => o.Count() == max));
+                //res[kvp.Key] = kvp.Value.GroupBy(x => x).Where(o => o.Count() == max).Select(x => x.Key).ToList();
+            }
+            return res;
+        }
+
     }
 }
