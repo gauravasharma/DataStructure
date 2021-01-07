@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DataStructure\\LinkedListProblems\\LinkedListProblems.csproj",
+      "projectUniqueName": "C:\\CodeRepository\\DataStructure\\LinkedListProblems\\LinkedListProblems.csproj",
       "projectName": "LinkedListProblems",
-      "projectPath": "D:\\DataStructure\\LinkedListProblems\\LinkedListProblems.csproj",
+      "projectPath": "C:\\CodeRepository\\DataStructure\\LinkedListProblems\\LinkedListProblems.csproj",
       "packagesPath": "C:\\Users\\gss1201\\.nuget\\packages\\",
-      "outputPath": "D:\\DataStructure\\LinkedListProblems\\obj\\",
+      "outputPath": "C:\\CodeRepository\\DataStructure\\LinkedListProblems\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

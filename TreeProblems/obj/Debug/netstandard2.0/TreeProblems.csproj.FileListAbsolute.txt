@@ -10,3 +10,15 @@ D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.AssemblyInfo
 D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.csproj.CopyComplete
 D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.dll
 D:\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.pdb
+C:\CodeRepository\DataStructure\TreeProblems\bin\Debug\netstandard2.0\TreeProblems.deps.json
+C:\CodeRepository\DataStructure\TreeProblems\bin\Debug\netstandard2.0\TreeProblems.dll
+C:\CodeRepository\DataStructure\TreeProblems\bin\Debug\netstandard2.0\TreeProblems.pdb
+C:\CodeRepository\DataStructure\TreeProblems\bin\Debug\netstandard2.0\DesignDataStructures.dll
+C:\CodeRepository\DataStructure\TreeProblems\bin\Debug\netstandard2.0\DesignDataStructures.pdb
+C:\CodeRepository\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.csprojAssemblyReference.cache
+C:\CodeRepository\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.csproj.CoreCompileInputs.cache
+C:\CodeRepository\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.AssemblyInfoInputs.cache
+C:\CodeRepository\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.AssemblyInfo.cs
+C:\CodeRepository\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.csproj.CopyComplete
+C:\CodeRepository\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.dll
+C:\CodeRepository\DataStructure\TreeProblems\obj\Debug\netstandard2.0\TreeProblems.pdb

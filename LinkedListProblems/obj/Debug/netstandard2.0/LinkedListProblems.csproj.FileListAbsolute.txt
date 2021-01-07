@@ -15,3 +15,12 @@ D:\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.
 D:\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.AssemblyInfo.cs
 D:\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.dll
 D:\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.pdb
+C:\CodeRepository\DataStructure\LinkedListProblems\bin\Debug\netstandard2.0\LinkedListProblems.deps.json
+C:\CodeRepository\DataStructure\LinkedListProblems\bin\Debug\netstandard2.0\LinkedListProblems.dll
+C:\CodeRepository\DataStructure\LinkedListProblems\bin\Debug\netstandard2.0\LinkedListProblems.pdb
+C:\CodeRepository\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.csprojAssemblyReference.cache
+C:\CodeRepository\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.csproj.CoreCompileInputs.cache
+C:\CodeRepository\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.AssemblyInfoInputs.cache
+C:\CodeRepository\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.AssemblyInfo.cs
+C:\CodeRepository\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.dll
+C:\CodeRepository\DataStructure\LinkedListProblems\obj\Debug\netstandard2.0\LinkedListProblems.pdb

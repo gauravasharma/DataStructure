@@ -201,11 +201,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DataStructure\\TreeProblems\\TreeProblems.csproj",
+      "projectUniqueName": "C:\\CodeRepository\\DataStructure\\TreeProblems\\TreeProblems.csproj",
       "projectName": "TreeProblems",
-      "projectPath": "D:\\DataStructure\\TreeProblems\\TreeProblems.csproj",
+      "projectPath": "C:\\CodeRepository\\DataStructure\\TreeProblems\\TreeProblems.csproj",
       "packagesPath": "C:\\Users\\gss1201\\.nuget\\packages\\",
-      "outputPath": "D:\\DataStructure\\TreeProblems\\obj\\",
+      "outputPath": "C:\\CodeRepository\\DataStructure\\TreeProblems\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -228,8 +228,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj": {
-              "projectPath": "D:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj"
+            "C:\\CodeRepository\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj": {
+              "projectPath": "C:\\CodeRepository\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj"
             }
           }
         }

@@ -101,9 +101,7 @@ namespace DesignDataStructures
                     cache.Remove(tail.key);
                     size--;
                 }
-                else {
-                    
-                }
+
             }
             else
             {

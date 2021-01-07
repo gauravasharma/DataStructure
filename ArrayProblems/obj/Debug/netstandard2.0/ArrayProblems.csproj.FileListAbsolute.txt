@@ -15,3 +15,12 @@ D:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.AssemblyIn
 D:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.AssemblyInfo.cs
 D:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.dll
 D:\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.pdb
+C:\CodeRepository\DataStructure\ArrayProblems\bin\Debug\netstandard2.0\ArrayProblems.deps.json
+C:\CodeRepository\DataStructure\ArrayProblems\bin\Debug\netstandard2.0\ArrayProblems.dll
+C:\CodeRepository\DataStructure\ArrayProblems\bin\Debug\netstandard2.0\ArrayProblems.pdb
+C:\CodeRepository\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.csprojAssemblyReference.cache
+C:\CodeRepository\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.csproj.CoreCompileInputs.cache
+C:\CodeRepository\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.AssemblyInfoInputs.cache
+C:\CodeRepository\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.AssemblyInfo.cs
+C:\CodeRepository\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.dll
+C:\CodeRepository\DataStructure\ArrayProblems\obj\Debug\netstandard2.0\ArrayProblems.pdb

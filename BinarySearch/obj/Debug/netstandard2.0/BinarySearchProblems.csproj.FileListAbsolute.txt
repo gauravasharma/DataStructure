@@ -15,3 +15,12 @@ D:\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.Asse
 D:\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.AssemblyInfo.cs
 D:\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.dll
 D:\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.pdb
+C:\CodeRepository\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.deps.json
+C:\CodeRepository\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.dll
+C:\CodeRepository\DataStructure\BinarySearch\bin\Debug\netstandard2.0\BinarySearchProblems.pdb
+C:\CodeRepository\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.csprojAssemblyReference.cache
+C:\CodeRepository\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.csproj.CoreCompileInputs.cache
+C:\CodeRepository\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.AssemblyInfoInputs.cache
+C:\CodeRepository\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.AssemblyInfo.cs
+C:\CodeRepository\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.dll
+C:\CodeRepository\DataStructure\BinarySearch\obj\Debug\netstandard2.0\BinarySearchProblems.pdb

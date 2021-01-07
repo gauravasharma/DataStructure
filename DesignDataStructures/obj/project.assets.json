@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj",
+      "projectUniqueName": "C:\\CodeRepository\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj",
       "projectName": "DesignDataStructures",
-      "projectPath": "D:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj",
+      "projectPath": "C:\\CodeRepository\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj",
       "packagesPath": "C:\\Users\\gss1201\\.nuget\\packages\\",
-      "outputPath": "D:\\DataStructure\\DesignDataStructures\\obj\\",
+      "outputPath": "C:\\CodeRepository\\DataStructure\\DesignDataStructures\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DataStructure\\BinarySearch\\BinarySearchProblems.csproj",
+      "projectUniqueName": "C:\\CodeRepository\\DataStructure\\BinarySearch\\BinarySearchProblems.csproj",
       "projectName": "BinarySearchProblems",
-      "projectPath": "D:\\DataStructure\\BinarySearch\\BinarySearchProblems.csproj",
+      "projectPath": "C:\\CodeRepository\\DataStructure\\BinarySearch\\BinarySearchProblems.csproj",
       "packagesPath": "C:\\Users\\gss1201\\.nuget\\packages\\",
-      "outputPath": "D:\\DataStructure\\BinarySearch\\obj\\",
+      "outputPath": "C:\\CodeRepository\\DataStructure\\BinarySearch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -11,3 +11,10 @@ D:\DataStructure\LinkedList\bin\Debug\LinkedList.pdb
 D:\DataStructure\LinkedList\obj\Debug\LinkedList.csproj.CoreCompileInputs.cache
 D:\DataStructure\LinkedList\obj\Debug\LinkedList.exe
 D:\DataStructure\LinkedList\obj\Debug\LinkedList.pdb
+C:\CodeRepository\DataStructure\LinkedList\bin\Debug\LinkedList.exe.config
+C:\CodeRepository\DataStructure\LinkedList\bin\Debug\LinkedList.exe
+C:\CodeRepository\DataStructure\LinkedList\bin\Debug\LinkedList.pdb
+C:\CodeRepository\DataStructure\LinkedList\obj\Debug\LinkedList.csprojAssemblyReference.cache
+C:\CodeRepository\DataStructure\LinkedList\obj\Debug\LinkedList.csproj.CoreCompileInputs.cache
+C:\CodeRepository\DataStructure\LinkedList\obj\Debug\LinkedList.exe
+C:\CodeRepository\DataStructure\LinkedList\obj\Debug\LinkedList.pdb

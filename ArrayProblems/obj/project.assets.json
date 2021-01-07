@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DataStructure\\ArrayProblems\\ArrayProblems.csproj",
+      "projectUniqueName": "C:\\CodeRepository\\DataStructure\\ArrayProblems\\ArrayProblems.csproj",
       "projectName": "ArrayProblems",
-      "projectPath": "D:\\DataStructure\\ArrayProblems\\ArrayProblems.csproj",
+      "projectPath": "C:\\CodeRepository\\DataStructure\\ArrayProblems\\ArrayProblems.csproj",
       "packagesPath": "C:\\Users\\gss1201\\.nuget\\packages\\",
-      "outputPath": "D:\\DataStructure\\ArrayProblems\\obj\\",
+      "outputPath": "C:\\CodeRepository\\DataStructure\\ArrayProblems\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

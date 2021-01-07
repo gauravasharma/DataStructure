@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DataStructure\\StringProblems\\StringProblems.csproj",
+      "projectUniqueName": "C:\\CodeRepository\\DataStructure\\StringProblems\\StringProblems.csproj",
       "projectName": "StringProblems",
-      "projectPath": "D:\\DataStructure\\StringProblems\\StringProblems.csproj",
+      "projectPath": "C:\\CodeRepository\\DataStructure\\StringProblems\\StringProblems.csproj",
       "packagesPath": "C:\\Users\\gss1201\\.nuget\\packages\\",
-      "outputPath": "D:\\DataStructure\\StringProblems\\obj\\",
+      "outputPath": "C:\\CodeRepository\\DataStructure\\StringProblems\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

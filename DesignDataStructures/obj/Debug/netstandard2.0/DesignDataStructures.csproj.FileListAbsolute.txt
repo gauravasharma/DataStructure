@@ -15,3 +15,12 @@ D:\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructu
 D:\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.AssemblyInfo.cs
 D:\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.dll
 D:\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.pdb
+C:\CodeRepository\DataStructure\DesignDataStructures\bin\Debug\netstandard2.0\DesignDataStructures.deps.json
+C:\CodeRepository\DataStructure\DesignDataStructures\bin\Debug\netstandard2.0\DesignDataStructures.dll
+C:\CodeRepository\DataStructure\DesignDataStructures\bin\Debug\netstandard2.0\DesignDataStructures.pdb
+C:\CodeRepository\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.csprojAssemblyReference.cache
+C:\CodeRepository\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.csproj.CoreCompileInputs.cache
+C:\CodeRepository\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.AssemblyInfoInputs.cache
+C:\CodeRepository\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.AssemblyInfo.cs
+C:\CodeRepository\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.dll
+C:\CodeRepository\DataStructure\DesignDataStructures\obj\Debug\netstandard2.0\DesignDataStructures.pdb

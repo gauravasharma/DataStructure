@@ -1,0 +1,9 @@
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\bin\Debug\netstandard2.0\AmazonOnlineAssesment.deps.json
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\bin\Debug\netstandard2.0\AmazonOnlineAssesment.dll
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\bin\Debug\netstandard2.0\AmazonOnlineAssesment.pdb
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\obj\Debug\netstandard2.0\AmazonOnlineAssesment.csprojAssemblyReference.cache
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\obj\Debug\netstandard2.0\AmazonOnlineAssesment.csproj.CoreCompileInputs.cache
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\obj\Debug\netstandard2.0\AmazonOnlineAssesment.AssemblyInfoInputs.cache
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\obj\Debug\netstandard2.0\AmazonOnlineAssesment.AssemblyInfo.cs
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\obj\Debug\netstandard2.0\AmazonOnlineAssesment.dll
+C:\CodeRepository\DataStructure\AmazonOnlineAssesment\obj\Debug\netstandard2.0\AmazonOnlineAssesment.pdb
