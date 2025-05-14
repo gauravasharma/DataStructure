@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DataStructure\\TreeProblems\\TreeProblems.csproj": {}
+    "C:\\Git Personal\\TreeProblems\\TreeProblems.csproj": {}
   },
   "projects": {
-    "C:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj": {
+    "C:\\Git Personal\\DesignDataStructures\\DesignDataStructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj",
+        "projectUniqueName": "C:\\Git Personal\\DesignDataStructures\\DesignDataStructures.csproj",
         "projectName": "DesignDataStructures",
-        "projectPath": "C:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj",
-        "packagesPath": "C:\\Users\\15092\\.nuget\\packages\\",
-        "outputPath": "C:\\DataStructure\\DesignDataStructures\\obj\\",
+        "projectPath": "C:\\Git Personal\\DesignDataStructures\\DesignDataStructures.csproj",
+        "packagesPath": "C:\\Users\\Gaurava.Sharma\\.nuget\\packages\\",
+        "outputPath": "C:\\Git Personal\\DesignDataStructures\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\15092\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Gaurava.Sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -30,6 +26,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -37,10 +34,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -55,30 +58,27 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\DataStructure\\TreeProblems\\TreeProblems.csproj": {
+    "C:\\Git Personal\\TreeProblems\\TreeProblems.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DataStructure\\TreeProblems\\TreeProblems.csproj",
+        "projectUniqueName": "C:\\Git Personal\\TreeProblems\\TreeProblems.csproj",
         "projectName": "TreeProblems",
-        "projectPath": "C:\\DataStructure\\TreeProblems\\TreeProblems.csproj",
-        "packagesPath": "C:\\Users\\15092\\.nuget\\packages\\",
-        "outputPath": "C:\\DataStructure\\TreeProblems\\obj\\",
+        "projectPath": "C:\\Git Personal\\TreeProblems\\TreeProblems.csproj",
+        "packagesPath": "C:\\Users\\Gaurava.Sharma\\.nuget\\packages\\",
+        "outputPath": "C:\\Git Personal\\TreeProblems\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\15092\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Gaurava.Sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -89,9 +89,10 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj": {
-                "projectPath": "C:\\DataStructure\\DesignDataStructures\\DesignDataStructures.csproj"
+              "C:\\Git Personal\\DesignDataStructures\\DesignDataStructures.csproj": {
+                "projectPath": "C:\\Git Personal\\DesignDataStructures\\DesignDataStructures.csproj"
               }
             }
           }
@@ -100,10 +101,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -118,11 +125,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

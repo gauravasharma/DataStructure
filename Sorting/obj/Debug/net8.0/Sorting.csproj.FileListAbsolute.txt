@@ -1,0 +1,15 @@
+C:\Git Personal\Sorting\bin\Debug\net8.0\Sorting.exe
+C:\Git Personal\Sorting\bin\Debug\net8.0\Sorting.deps.json
+C:\Git Personal\Sorting\bin\Debug\net8.0\Sorting.runtimeconfig.json
+C:\Git Personal\Sorting\bin\Debug\net8.0\Sorting.dll
+C:\Git Personal\Sorting\bin\Debug\net8.0\Sorting.pdb
+C:\Git Personal\Sorting\obj\Debug\net8.0\Sorting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git Personal\Sorting\obj\Debug\net8.0\Sorting.AssemblyInfoInputs.cache
+C:\Git Personal\Sorting\obj\Debug\net8.0\Sorting.AssemblyInfo.cs
+C:\Git Personal\Sorting\obj\Debug\net8.0\Sorting.csproj.CoreCompileInputs.cache
+C:\Git Personal\Sorting\obj\Debug\net8.0\Sorting.sourcelink.json
+C:\Git Personal\Sorting\obj\Debug\net8.0\Sorting.dll
+C:\Git Personal\Sorting\obj\Debug\net8.0\refint\Sorting.dll
+C:\Git Personal\Sorting\obj\Debug\net8.0\Sorting.pdb
+C:\Git Personal\Sorting\obj\Debug\net8.0\Sorting.genruntimeconfig.cache
+C:\Git Personal\Sorting\obj\Debug\net8.0\ref\Sorting.dll

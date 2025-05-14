@@ -1,36 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DataStructure\\StackAndQueues\\StackAndQueues.csproj": {}
+    "C:\\Git Personal\\StackAndQueues\\StackAndQueues.csproj": {}
   },
   "projects": {
-    "C:\\DataStructure\\LinkedList\\LinkedList.csproj": {
-      "version": "1.0.0",
+    "C:\\Git Personal\\LinkedList\\LinkedList.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\DataStructure\\LinkedList\\LinkedList.csproj",
+        "projectUniqueName": "C:\\Git Personal\\LinkedList\\LinkedList.csproj",
         "projectName": "LinkedList",
-        "projectPath": "C:\\DataStructure\\LinkedList\\LinkedList.csproj"
+        "projectPath": "C:\\Git Personal\\LinkedList\\LinkedList.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
-        "net461": {}
+        "net48": {}
       }
     },
-    "C:\\DataStructure\\StackAndQueues\\StackAndQueues.csproj": {
+    "C:\\Git Personal\\StackAndQueues\\StackAndQueues.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DataStructure\\StackAndQueues\\StackAndQueues.csproj",
+        "projectUniqueName": "C:\\Git Personal\\StackAndQueues\\StackAndQueues.csproj",
         "projectName": "StackAndQueues",
-        "projectPath": "C:\\DataStructure\\StackAndQueues\\StackAndQueues.csproj",
-        "packagesPath": "C:\\Users\\15092\\.nuget\\packages\\",
-        "outputPath": "C:\\DataStructure\\StackAndQueues\\obj\\",
+        "projectPath": "C:\\Git Personal\\StackAndQueues\\StackAndQueues.csproj",
+        "packagesPath": "C:\\Users\\Gaurava.Sharma\\.nuget\\packages\\",
+        "outputPath": "C:\\Git Personal\\StackAndQueues\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\15092\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Gaurava.Sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -41,9 +41,10 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\DataStructure\\LinkedList\\LinkedList.csproj": {
-                "projectPath": "C:\\DataStructure\\LinkedList\\LinkedList.csproj"
+              "C:\\Git Personal\\LinkedList\\LinkedList.csproj": {
+                "projectPath": "C:\\Git Personal\\LinkedList\\LinkedList.csproj"
               }
             }
           }
@@ -52,10 +53,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -70,11 +77,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
